@@ -5,11 +5,9 @@
 { config, lib, pkgs, ... }:
 
 {
-  disabledModules = [ "system/boot/loader/systemd-boot/systemd-boot.nix" ];
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./systemd-boot.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -120,7 +118,7 @@
   # and migrated your data accordingly.
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Did you read the comment?
 
 }
 

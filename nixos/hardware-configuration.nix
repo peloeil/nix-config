@@ -24,8 +24,8 @@
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/c3662ea1-9ebb-4781-a22d-3eee366160dd";
-      fsType = "btrfs";
+    { device = "/dev/disk/by-uuid/AB2B-1065";
+      fsType = "vfat";
     };
 
   swapDevices =
