@@ -66,6 +66,7 @@
 	  "0" = "Default";
 	};
       };
+      settings.globalOptions."Hotkey/TriggerKeys"."0" = "Shift_R";
     };
   };
   fonts = {
