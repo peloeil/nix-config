@@ -85,6 +85,7 @@
       };
     };
   };
+  programs.light.enable = true;
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
@@ -110,7 +111,7 @@
   users.users.peloeil = {
     password = "test";
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "video" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       vim
       tree
