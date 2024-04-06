@@ -41,11 +41,32 @@
   # };
   i18n.inputMethod = {
     enabled = "fcitx5";
-    fcitx5.addons = with pkgs; [
-      fcitx5-mozc
-      fcitx5-gtk
-      libsForQt5.fcitx5-qt
-    ];
+    fcitx5 = {
+      addons = with pkgs; [
+        fcitx5-mozc
+        fcitx5-gtk
+        libsForQt5.fcitx5-qt
+      ];
+      ignoreUserConfig = true;
+      settings.inputMethod = {
+        "Groups/0" = {
+	  "Name" = "Default";
+	  "Default Layout" = "us";
+	  "DefaultIM" = "mozc";
+	};
+	"Groups/0/Items/0" = {
+	  "Name" = "keyboard-us";
+	  "Layout" = null;
+	};
+	"Groups/0/Items/1" = {
+	  "Name" = "mozc";
+	  "Layout" = null;
+	};
+	"GroupOrder" = {
+	  "0" = "Default";
+	};
+      };
+    };
   };
   fonts = {
     packages = with pkgs; [
