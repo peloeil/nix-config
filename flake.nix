@@ -27,7 +27,7 @@
           inherit inputs;
         };
         modules = [
-          ./home/peloeil/home.nix
+          ./users/peloeil/home.nix
         ];
       };
     };
