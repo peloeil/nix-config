@@ -10,5 +10,6 @@
 	configFile = ./i3config;
       };
     };
+    desktopManager.runXdgAutostartIfNone = true;
   };
 }
