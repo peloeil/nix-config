@@ -7,6 +7,7 @@
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "discord"
+    "slack"
   ];
 
   home = rec {
@@ -19,6 +20,7 @@
       git
       which
       btop
+      slack
     ];
   };
   programs.home-manager.enable = true;
