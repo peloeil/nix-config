@@ -21,6 +21,7 @@
       which
       btop
       slack
+      discord
     ];
   };
   programs.home-manager.enable = true;
