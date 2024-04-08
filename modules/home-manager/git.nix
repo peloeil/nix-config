@@ -1,8 +1,6 @@
-{ lib, pkgs, ... }:
-
 {
   programs.git = {
-    enable = lib.mkDefault true;
+    enable = true;
     extraConfig = {
       init.defaultBranch = "main";
     };
