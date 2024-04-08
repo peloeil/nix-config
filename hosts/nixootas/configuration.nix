@@ -108,14 +108,11 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.mutableUsers = false;
   users.users.peloeil = {
-    password = "test";
+    hashedPassword = "$y$j9T$ZQs8lytPrPqLPOhGnGl4Y0$ulf1OfRf4J36TeRefHMlhu/1bxeaaTLiQrH71xjNzJ8";
     isNormalUser = true;
     extraGroups = [ "wheel" "video" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      vim
-      tree
-    ];
   };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
