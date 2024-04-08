@@ -6,92 +6,28 @@
 
 {
   disabledModules = [ "system/boot/loader/systemd-boot/systemd-boot.nix" ];
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./xserver.nix
-      ./systemd-boot.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ../../modules/nixos/systemd-patch/systemd-boot.nix
+    ../../modules/nixos/xserver.nix
+    ../../modules/nixos/i18n.nix
+  ];
 
-  # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.loader.efi.efiSysMountPoint = "/efi";
   boot.loader.systemd-boot.xbootldrMountPoint = "/boot";
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.efiSysMountPoint = "/efi";
 
-  networking.hostName = "nixootas"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.hostName = "nixootas";
+  networking.networkmanager.enable = true;
 
-  # Set your time zone.
   time.timeZone = "Asia/Tokyo";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
-  i18n.inputMethod = {
-    enabled = "fcitx5";
-    fcitx5 = {
-      addons = with pkgs; [
-        fcitx5-mozc
-        fcitx5-gtk
-        libsForQt5.fcitx5-qt
-      ];
-      ignoreUserConfig = true;
-      settings.inputMethod = {
-        "Groups/0" = {
-	  "Name" = "Default";
-	  "Default Layout" = "us";
-	  "DefaultIM" = "mozc";
-	};
-	"Groups/0/Items/0" = {
-	  "Name" = "keyboard-us";
-	  "Layout" = null;
-	};
-	"Groups/0/Items/1" = {
-	  "Name" = "mozc";
-	  "Layout" = null;
-	};
-	"GroupOrder" = {
-	  "0" = "Default";
-	};
-      };
-      settings.globalOptions."Hotkey/TriggerKeys"."0" = "Shift_R";
-    };
-  };
-  fonts = {
-    packages = with pkgs; [
-      noto-fonts-cjk-sans
-      noto-fonts-cjk-serif
-      noto-fonts-emoji
-      (nerdfonts.override { fonts = [ "Hack" ]; })
-    ];
-    fontconfig = {
-      defaultFonts = {
-        emoji = [ "Noto Color Emoji" ];
-        monospace = [ "Hack Nerd Font" "Noto Color Emoji" ];
-        sansSerif = [ "Noto Sans CJK JP" "Noto Color Emoji" ];
-        serif = [ "Noto Serif CJK JP" "Noto Color Emoji" ];
-      };
-    };
-  };
   programs.light.enable = true;
-
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-
-  
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -107,7 +43,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.mutableUsers = false;
   users.users.peloeil = {
     hashedPassword = "$y$j9T$ZQs8lytPrPqLPOhGnGl4Y0$ulf1OfRf4J36TeRefHMlhu/1bxeaaTLiQrH71xjNzJ8";
