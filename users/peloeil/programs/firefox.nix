@@ -14,6 +14,7 @@
       in listToAttrs [
         (extension "bitwarden-password-manager" "{446900e4-71c2-419f-a6a7-df9c091e268b}")
         (extension "enhancer-for-youtube" "enhancerforyoutube@maximerf.addons.mozilla.org")
+        (extension "multi-account-containers" "@testpilot-containers")
       ];
     };
     profiles.peloeil = {
@@ -22,13 +23,33 @@
 	default = "DuckDuckGo";
 	privateDefault = "DuckDuckGo";
       };
-      #containers = {
-      #  programs = {
-      #    color = "blue";
-      #    icon = "chill";
-      #    id = 1;
-      #  };
-      #};
+      containers = {
+        hobby = {
+          color = "pink";
+          icon = "fingerprint";
+          id = 1;
+        };
+        programs = {
+          color = "blue";
+          icon = "chill";
+          id = 2;
+        };
+	university = {
+	  color = "orange";
+	  icon = "briefcase";
+	  id = 3;
+	};
+	laboratory = {
+	  color = "purple";
+	  icon = "tree";
+	  id = 4;
+	};
+	ft-tokyo = {
+	  color = "green";
+	  icon = "vacation";
+	  id = 42;
+	};
+      };
     };
   };
 }
