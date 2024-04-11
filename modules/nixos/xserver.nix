@@ -7,7 +7,7 @@
     windowManager = {
       i3 = {
         enable = true;
-	configFile = ./i3config;
+        configFile = ./i3config;
       };
     };
     desktopManager.runXdgAutostartIfNone = true;
