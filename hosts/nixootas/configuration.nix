@@ -31,6 +31,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   programs.light.enable = true;
+  programs.fish.enable = true;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -50,6 +51,7 @@
   users.users.peloeil = {
     hashedPassword = "$y$j9T$ZQs8lytPrPqLPOhGnGl4Y0$ulf1OfRf4J36TeRefHMlhu/1bxeaaTLiQrH71xjNzJ8";
     isNormalUser = true;
+    shell = pkgs.fish;
     extraGroups = ["wheel" "video"]; # Enable ‘sudo’ for the user.
   };
 
