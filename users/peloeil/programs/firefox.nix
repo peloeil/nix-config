@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs.firefox = {
     enable = true;
@@ -15,6 +14,7 @@
         (extension "bitwarden-password-manager" "{446900e4-71c2-419f-a6a7-df9c091e268b}")
         (extension "enhancer-for-youtube" "enhancerforyoutube@maximerf.addons.mozilla.org")
         (extension "multi-account-containers" "@testpilot-containers")
+        (extension "ublock-origin" "uBlock0@raymondhill.net")
       ];
     };
     profiles.peloeil = {
