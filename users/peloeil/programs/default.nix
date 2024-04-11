@@ -4,5 +4,6 @@
     ./git.nix
     ./firefox.nix
     ./wezterm.nix
+    ./fish.nix
   ];
 }
