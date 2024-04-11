@@ -8,6 +8,10 @@
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "discord"
     "slack"
+    "obsidian"
+  ];
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
   ];
 
   home = rec {
@@ -22,6 +26,7 @@
       btop
       slack
       discord
+      obsidian
     ];
   };
   programs.home-manager.enable = true;
