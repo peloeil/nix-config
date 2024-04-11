@@ -12,6 +12,7 @@
       "discord"
       "slack"
       "obsidian"
+      "zoom"
     ];
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
@@ -30,6 +31,7 @@
       slack
       discord
       obsidian
+      zoom-us
     ];
   };
   programs.home-manager.enable = true;
