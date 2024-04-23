@@ -5,5 +5,6 @@
     ./firefox.nix
     ./wezterm.nix
     ./fish.nix
+    ./starship.nix
   ];
 }
