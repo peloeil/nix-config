@@ -32,6 +32,8 @@
 
   programs.light.enable = true;
   programs.fish.enable = true;
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
