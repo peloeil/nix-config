@@ -13,6 +13,8 @@
       "slack"
       "obsidian"
       "zoom"
+      "vscode"
+      "vscode-extension-ms-vscode-cpptools"
     ];
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"

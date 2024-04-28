@@ -6,5 +6,6 @@
     ./wezterm.nix
     ./fish.nix
     ./starship.nix
+    ./vscode.nix
   ];
 }
