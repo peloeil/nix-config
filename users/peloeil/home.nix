@@ -32,6 +32,8 @@
       discord
       obsidian
       zoom-us
+      rye
+      unzip
     ];
   };
   programs.home-manager.enable = true;
