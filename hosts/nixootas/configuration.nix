@@ -14,6 +14,7 @@
     ../../modules/nixos/xserver.nix
     ../../modules/nixos/i18n.nix
     ../../modules/nixos/nix.nix
+    ../../modules/nixos/docker.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -54,7 +55,7 @@
     hashedPassword = "$y$j9T$ZQs8lytPrPqLPOhGnGl4Y0$ulf1OfRf4J36TeRefHMlhu/1bxeaaTLiQrH71xjNzJ8";
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = ["wheel" "video"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "video" "docker"]; # Enable ‘sudo’ for the user.
   };
 
   # List packages installed in system profile. To search, run:
