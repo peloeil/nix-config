@@ -36,6 +36,7 @@
       zoom-us
       rye
       unzip
+      chromium
     ];
   };
   programs.home-manager.enable = true;
