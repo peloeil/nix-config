@@ -15,6 +15,7 @@
     ../../modules/nixos/i18n.nix
     ../../modules/nixos/nix.nix
     ../../modules/nixos/docker.nix
+    ../../modules/nixos/udisks.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
