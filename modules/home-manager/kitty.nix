@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.hyprland = {
+  programs.kitty = {
     enable = true;
   };
 }

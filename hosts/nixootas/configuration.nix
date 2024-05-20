@@ -11,11 +11,11 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/systemd-patch/systemd-boot.nix
-    ../../modules/nixos/xserver.nix
     ../../modules/nixos/i18n.nix
     ../../modules/nixos/nix.nix
     ../../modules/nixos/docker.nix
     ../../modules/nixos/udisks.nix
+    ../../modules/nixos/wayland.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
