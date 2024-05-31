@@ -15,7 +15,7 @@
     ../../modules/nixos/nix.nix
     ../../modules/nixos/docker.nix
     ../../modules/nixos/udisks.nix
-    ../../modules/nixos/wayland.nix
+    ../../modules/nixos/xserver.nix
     ../../modules/nixos/tailscale.nix
   ];
 
