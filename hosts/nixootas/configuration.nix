@@ -16,6 +16,7 @@
     ../../modules/nixos/docker.nix
     ../../modules/nixos/udisks.nix
     ../../modules/nixos/wayland.nix
+    ../../modules/nixos/tailscale.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
