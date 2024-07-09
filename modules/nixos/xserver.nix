@@ -11,17 +11,6 @@
       };
     };
     desktopManager.runXdgAutostartIfNone = true;
-    libinput = {
-      enable = true;
-      touchpad = {
-        disableWhileTyping = true;
-        naturalScrolling = true;
-        tapping = false;
-        additionalOptions = ''
-          Option "ScrollPixelDistance" "50"
-        '';
-      };
-    };
     deviceSection = ''
       Option "TearFree" "true"
     '';
