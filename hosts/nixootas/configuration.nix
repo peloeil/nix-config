@@ -37,6 +37,8 @@
   programs.fish.enable = true;
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+  #systemd.network.wait-online.enable = false;
+  systemd.services.NetworkManager-wait-online.enable = false;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
