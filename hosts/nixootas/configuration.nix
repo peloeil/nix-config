@@ -17,6 +17,7 @@
     ../../modules/nixos/udisks.nix
     ../../modules/nixos/xserver.nix
     ../../modules/nixos/tailscale.nix
+    ../../modules/nixos/libinput.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
