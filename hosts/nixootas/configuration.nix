@@ -7,8 +7,10 @@
   pkgs,
   ...
 }: {
+  disabledModules = ["system/boot/loader/systemd-boot/systemd-boot.nix"];
   imports = [
     ./hardware-configuration.nix
+    ../../modules/nixos/systemd-patch/systemd-boot.nix
     ../../modules/nixos/i18n.nix
     ../../modules/nixos/nix.nix
     ../../modules/nixos/docker.nix
@@ -35,6 +37,7 @@
   programs.fish.enable = true;
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+  #systemd.network.wait-online.enable = false;
   systemd.services.NetworkManager-wait-online.enable = false;
 
   # Configure keymap in X11
