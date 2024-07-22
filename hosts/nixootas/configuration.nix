@@ -10,14 +10,14 @@
   disabledModules = ["system/boot/loader/systemd-boot/systemd-boot.nix"];
   imports = [
     ./hardware-configuration.nix
-    ../../modules/nixos/systemd-patch/systemd-boot.nix
-    ../../modules/nixos/i18n.nix
-    ../../modules/nixos/nix.nix
-    ../../modules/nixos/docker.nix
-    ../../modules/nixos/udisks.nix
-    ../../modules/nixos/xserver.nix
-    ../../modules/nixos/tailscale.nix
-    ../../modules/nixos/libinput.nix
+    ../../nixos/systemd-patch/systemd-boot.nix
+    ../../nixos/i18n.nix
+    ../../nixos/nix.nix
+    ../../nixos/docker.nix
+    ../../nixos/udisks.nix
+    ../../nixos/xserver.nix
+    ../../nixos/tailscale.nix
+    ../../nixos/libinput.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
