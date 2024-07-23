@@ -17,7 +17,11 @@
     ../../../nixos/core/tailscale.nix
     ../../../nixos/core/udisks.nix
     ../../../nixos/core/xserver.nix
-  ];
+  ] ++ (with inputs.nixos-hardware.nixosModules; [
+    common-cpu-amd
+    common-gpu-amd
+    common-pc-laptop
+  ]);
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.xbootldrMountPoint = "/boot";

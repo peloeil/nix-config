@@ -7,6 +7,7 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware?rev=3980e7816c99d9e4da7a7b762e5b294055b73b2f";
   };
 
   outputs = inputs: let
