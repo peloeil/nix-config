@@ -41,7 +41,7 @@ in {
     nixootas = mkNixosSystem {
       system = "x86_64-linux";
       hostname = "nixootas";
-      modules = [./nixootas/nixos];
+      modules = [./nixootas/system];
     };
   };
   home-manager = {
