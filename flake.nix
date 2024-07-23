@@ -9,33 +9,18 @@
     };
   };
 
-  outputs = inputs: {
-    formatter.x86_64-linux = inputs.nixpkgs.legacyPackages.x86_64-linux.alejandra;
-    nixosConfigurations = let
-      conf = hostname: system:
-        inputs.nixpkgs.lib.nixosSystem {
-          system = system;
-          modules = [./hosts/${hostname}/configuration.nix];
-          specialArgs = {
-            inherit inputs;
-            hostname = hostname;
-          };
-        };
-    in {
-      nixootas = conf "nixootas" "x86_64-linux";
-    };
-    homeConfigurations = let
-      conf = username:
-        inputs.home-manager.lib.homeManagerConfiguration {
-          pkgs = import inputs.nixpkgs {system = "x86_64-linux";};
-          modules = [./users/${username}/home.nix];
-          extraSpecialArgs = {
-            inherit inputs;
-            username = username;
-          };
-        };
-    in {
-      peloeil = conf "peloeil";
-    };
+  outputs = inputs: let
+    allSystems = [
+      "aarch64-linux" # 64-bit ARM Linux
+      "x86_64-linux" # 64-bit x86_64 Linux
+      "aarch64-darwin" # 64-bit ARM macOS
+      "x86_64-darwin" # 64-bit x86_64 macOS
+    ];
+    forAllSystems = inputs.nixpkgs.lib.genAttrs allSystems;
+  in {
+    packages = forAllSystems (system: inputs.nixpkgs.legacyPackages.${system});
+    formatter = forAllSystems (system: inputs.nixpkgs.legacyPackages.${system}.alejandra);
+    nixosConfigurations = (import ./hosts inputs).nixos;
+    homeConfigurations = (import ./hosts inputs).home-manager;
   };
 }

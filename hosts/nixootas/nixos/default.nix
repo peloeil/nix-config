@@ -2,22 +2,21 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 {
-  config,
-  lib,
+  inputs,
   pkgs,
   ...
 }: {
   disabledModules = ["system/boot/loader/systemd-boot/systemd-boot.nix"];
   imports = [
     ./hardware-configuration.nix
-    ../../nixos/systemd-patch/systemd-boot.nix
-    ../../nixos/i18n.nix
-    ../../nixos/nix.nix
-    ../../nixos/docker.nix
-    ../../nixos/udisks.nix
-    ../../nixos/xserver.nix
-    ../../nixos/tailscale.nix
-    ../../nixos/libinput.nix
+    ../../../nixos/laptop/systemd-patch/systemd-boot.nix
+    ../../../nixos/core/docker.nix
+    ../../../nixos/core/i18n.nix
+    ../../../nixos/core/libinput.nix
+    ../../../nixos/core/nix.nix
+    ../../../nixos/core/tailscale.nix
+    ../../../nixos/core/udisks.nix
+    ../../../nixos/core/xserver.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
