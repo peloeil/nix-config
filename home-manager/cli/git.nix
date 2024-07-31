@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   programs.git = {
     enable = true;
     userName = lib.mkDefault "Shun Ota";
