@@ -7,6 +7,7 @@
     ../../../../home-manager/cli/fish.nix
     ../../../../home-manager/cli/git.nix
     ../../../../home-manager/cli/starship.nix
+    ../../../../home-manager/gui/fcitx
     ../../../../home-manager/gui/vscode.nix
     ../../../../home-manager/gui/wezterm.nix
     ./firefox.nix
