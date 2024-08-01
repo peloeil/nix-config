@@ -6,11 +6,9 @@
   pkgs,
   ...
 }: {
-  disabledModules = ["system/boot/loader/systemd-boot/systemd-boot.nix"];
   imports =
     [
       ./hardware-configuration.nix
-      ../../../nixos/laptop/systemd-patch/systemd-boot.nix
       ../../../nixos/core/docker.nix
       ../../../nixos/core/i18n.nix
       ../../../nixos/core/libinput.nix
