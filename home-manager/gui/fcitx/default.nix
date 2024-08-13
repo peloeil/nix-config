@@ -10,9 +10,11 @@
       ];
     };
   };
+  xdg.configFile = {
+    "fcitx5/config".source = ./config;
+    "fcitx5/profile".source = ./profile;
+  };
   home.file = {
-    ".config/fcitx5/config".source = ./config;
-    ".config/fcitx5/profile".source = ./profile;
     ".xprofile".text = ''
       export GTK_IM_MODULE=fcitx
       export QT_IM_MODULE=fcitx
