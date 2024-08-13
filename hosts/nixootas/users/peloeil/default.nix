@@ -6,7 +6,7 @@
     ../../../../home-manager/cli/starship.nix
     ../../../../home-manager/gui/fcitx
     ../../../../home-manager/gui/vscode.nix
-    ../../../../home-manager/gui/wezterm.nix
+    ../../../../home-manager/gui/wezterm
     ./firefox.nix
     ./git.nix
   ];
