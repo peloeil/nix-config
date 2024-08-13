@@ -1,8 +1,5 @@
+{ pkgs, lib, ... }:
 {
-  pkgs,
-  lib,
-  ...
-}: {
   imports = [
     ../../../../home-manager/cli/fish.nix
     ../../../../home-manager/cli/git.nix
@@ -14,7 +11,8 @@
     ./git.nix
   ];
 
-  nixpkgs.config.allowUnfreePredicate = pkg:
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
     builtins.elem (lib.getName pkg) [
       "discord"
       "slack"
@@ -24,9 +22,7 @@
       "vscode-extension-ms-vscode-cpptools"
       "unityhub"
     ];
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0"
-  ];
+  nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   home.packages = with pkgs; [
     neofetch

@@ -1,11 +1,8 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
+{ inputs, pkgs, ... }:
 {
-  inputs,
-  pkgs,
-  ...
-}: {
   imports =
     [
       ./hardware-configuration.nix
@@ -63,7 +60,12 @@
     hashedPassword = "$y$j9T$ZQs8lytPrPqLPOhGnGl4Y0$ulf1OfRf4J36TeRefHMlhu/1bxeaaTLiQrH71xjNzJ8";
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = ["wheel" "video" "docker" "networkmanager"]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "video"
+      "docker"
+      "networkmanager"
+    ]; # Enable ‘sudo’ for the user.
   };
 
   # List packages installed in system profile. To search, run:
