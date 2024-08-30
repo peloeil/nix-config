@@ -1,18 +1,18 @@
 {
   "nodes": {
-    "alpha_nvim": {
+    "hop_nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1724084627,
-        "narHash": "sha256-gvPEmjM36Z7Q8K83/0ZVLN6J/2mDfEZJ7cW1u+FWf/8=",
-        "owner": "goolord",
-        "repo": "alpha-nvim",
-        "rev": "b6f4129302db197a7249e67a90de3f2b676de13e",
+        "lastModified": 1723130452,
+        "narHash": "sha256-hNo4iqssFjvaWN65cqo/NyuwYzgKiIjwsqFzk2EG/h4=",
+        "owner": "smoka7",
+        "repo": "hop.nvim",
+        "rev": "8f51ef02700bb3cdcce94e92eff16170a6343c4f",
         "type": "github"
       },
       "original": {
-        "owner": "goolord",
-        "repo": "alpha-nvim",
+        "owner": "smoka7",
+        "repo": "hop.nvim",
         "type": "github"
       }
     },
@@ -50,7 +50,7 @@
     },
     "root": {
       "inputs": {
-        "alpha_nvim": "alpha_nvim",
+        "hop_nvim": "hop_nvim",
         "lazy_nvim": "lazy_nvim",
         "nixpkgs": "nixpkgs"
       }

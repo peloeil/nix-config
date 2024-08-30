@@ -7,8 +7,8 @@
       url = "github:folke/lazy.nvim";
       flake = false;
     };
-    alpha_nvim = {
-      url = "github:goolord/alpha-nvim";
+    hop_nvim = {
+      url = "github:smoka7/hop.nvim";
       flake = false;
     };
   };
@@ -26,5 +26,14 @@
     in
     {
       formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-rfc-style);
+      packages = forAllSystems (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        {
+          default = pkgs.callPackage ./neovim.nix { };
+        }
+      );
     };
 }
