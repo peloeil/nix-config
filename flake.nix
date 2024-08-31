@@ -11,6 +11,10 @@
       url = "github:smoka7/hop.nvim";
       flake = false;
     };
+    oil_nvim = {
+      url = "github:stevearc/oil.nvim";
+      flake = false;
+    };
   };
 
   outputs =
@@ -30,9 +34,26 @@
         system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
+          pluginInputs = builtins.removeAttrs inputs [ "nixpkgs" ];
+          plugins =
+            (builtins.mapAttrs (
+              name: value:
+              pkgs.vimUtils.buildVimPlugin {
+                name = name;
+                src = value;
+              }
+            ) pluginInputs)
+            // {
+              lazy_nvim = pkgs.callPackage ./pkgs/lazy_nvim.nix { inherit inputs; };
+            };
+          config = pkgs.callPackage ./config.nix { inherit plugins; };
+          mynvim = pkgs.writeShellScriptBin "nvim" ''
+            MY_CONFIG_PATH=${config} ${pkgs.neovim-unwrapped}/bin/nvim -u ${config}/init.lua "$@"
+          '';
         in
         {
-          default = pkgs.callPackage ./neovim.nix { };
+          default = mynvim;
+          inherit config;
         }
       );
     };

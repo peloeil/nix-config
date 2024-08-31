@@ -19,11 +19,11 @@
     "lazy_nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1721907503,
-        "narHash": "sha256-Rd5r7AcdXYJ+gIsvh0N3WIAgg7xXqEVo+62VzIT5QHo=",
+        "lastModified": 1725087798,
+        "narHash": "sha256-qERgCq8exkdVQok72TAU1+xvTiy2wxcjsVwoHE59kOc=",
         "owner": "folke",
         "repo": "lazy.nvim",
-        "rev": "077102c5bfc578693f12377846d427f49bc50076",
+        "rev": "48b52b5cfcf8f88ed0aff8fde573a5cc20b1306d",
         "type": "github"
       },
       "original": {
@@ -34,11 +34,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1724999960,
-        "narHash": "sha256-LB3jqSGW5u1ZcUcX6vO/qBOq5oXHlmOCxsTXGMEitp4=",
+        "lastModified": 1725067332,
+        "narHash": "sha256-bMi5zhDwR6jdmN5mBHEu9gQQf9CibIEasA/6mc34Iek=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "b96f849e725333eb2b1c7f1cb84ff102062468ba",
+        "rev": "192e7407cc66e2eccc3a6c5ad3834dd62fae3800",
         "type": "github"
       },
       "original": {
@@ -48,11 +48,28 @@
         "type": "github"
       }
     },
+    "oil_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725065409,
+        "narHash": "sha256-vBQA+IhqakMmAVQrAZbvJkN9wLGqJ3m0EjoUi4uI9MA=",
+        "owner": "stevearc",
+        "repo": "oil.nvim",
+        "rev": "1fe476daf0b3c108cb8ee1fc1226cc282fa2c9c1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "stevearc",
+        "repo": "oil.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "hop_nvim": "hop_nvim",
         "lazy_nvim": "lazy_nvim",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "oil_nvim": "oil_nvim"
       }
     }
   },
