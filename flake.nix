@@ -34,18 +34,7 @@
         system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
-          pluginInputs = builtins.removeAttrs inputs [ "nixpkgs" ];
-          plugins =
-            (builtins.mapAttrs (
-              name: value:
-              pkgs.vimUtils.buildVimPlugin {
-                name = name;
-                src = value;
-              }
-            ) pluginInputs)
-            // {
-              lazy_nvim = pkgs.callPackage ./pkgs/lazy_nvim.nix { inherit inputs; };
-            };
+          plugins = import ./pkgs/plugins.nix { inherit inputs pkgs; };
           config = pkgs.callPackage ./config.nix { inherit plugins; };
           mynvim = pkgs.writeShellScriptBin "nvim" ''
             MY_CONFIG_PATH=${config} ${pkgs.neovim-unwrapped}/bin/nvim -u ${config}/init.lua "$@"
