@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "hlchunk_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725001812,
+        "narHash": "sha256-/SECuy9XxIMGw7ujjXXm4vvYEa3bxJ7gQfv8r738MYc=",
+        "owner": "shellRaining",
+        "repo": "hlchunk.nvim",
+        "rev": "a33794db6d983328a89431ce11316ddaffe422c5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "shellRaining",
+        "repo": "hlchunk.nvim",
+        "type": "github"
+      }
+    },
     "hop_nvim": {
       "flake": false,
       "locked": {
@@ -66,6 +82,7 @@
     },
     "root": {
       "inputs": {
+        "hlchunk_nvim": "hlchunk_nvim",
         "hop_nvim": "hop_nvim",
         "lazy_nvim": "lazy_nvim",
         "nixpkgs": "nixpkgs",

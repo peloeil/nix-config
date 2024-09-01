@@ -15,6 +15,10 @@
       url = "github:stevearc/oil.nvim";
       flake = false;
     };
+    hlchunk_nvim = {
+      url = "github:shellRaining/hlchunk.nvim";
+      flake = false;
+    };
   };
 
   outputs =
