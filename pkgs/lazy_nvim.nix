@@ -1,6 +1,3 @@
-# lazy.nvim reads plugin configs from $HOME/.config/nvim via vim.fn.stdpath("config")
-# This modified lazy.nvim refers to $MY_CONFIG_PATH instead of it
-# I set Nix store path of my neovim config to $MY_CONFIG_PATH
 {
   stdenv,
   vimUtils,
