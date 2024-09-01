@@ -39,7 +39,7 @@
         let
           pkgs = nixpkgs.legacyPackages.${system};
           plugins = import ./pkgs/plugins.nix { inherit inputs pkgs; };
-          config = pkgs.callPackage ./config.nix { inherit plugins; };
+          config = pkgs.callPackage ./pkgs/config.nix { inherit plugins; };
           mynvim = pkgs.writeShellScriptBin "nvim" ''
             MY_CONFIG_PATH=${config} ${pkgs.neovim-unwrapped}/bin/nvim -u ${config}/init.lua "$@"
           '';

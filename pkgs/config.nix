@@ -4,7 +4,7 @@ stdenv.mkDerivation (
   // {
     pname = "peloeil-nvim-config";
     version = "0.0.1";
-    src = ./nvim;
+    src = ../nvim;
     installPhase = ''
       mkdir -p $out
       for file in $(find . -type f); do
