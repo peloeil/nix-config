@@ -1,4 +1,9 @@
-inputs:
+inputs@{
+  nixpkgs,
+  home-manager,
+  nixos-hardware,
+  ...
+}:
 let
   mkNixosSystem =
     {
@@ -6,7 +11,7 @@ let
       hostname,
       modules,
     }:
-    inputs.nixpkgs.lib.nixosSystem {
+    nixpkgs.lib.nixosSystem {
       inherit system modules;
       specialArgs = {
         inherit inputs hostname;
@@ -19,8 +24,8 @@ let
       overlays,
       modules,
     }:
-    inputs.home-manager.lib.homeManagerConfiguration {
-      pkgs = import inputs.nixpkgs { inherit system overlays; };
+    home-manager.lib.homeManagerConfiguration {
+      pkgs = import nixpkgs { inherit system overlays; };
       extraSpecialArgs = {
         inherit inputs username;
       };
