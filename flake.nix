@@ -51,10 +51,7 @@
         let
           pkgs = nixpkgs.legacyPackages.${system};
           plugins = import ./config/plugins.nix { inherit inputs pkgs; };
-          lsp = with pkgs; [
-            nil
-            lua-language-server
-          ];
+          lsp = import ./config/lsp.nix { inherit pkgs; };
           config = pkgs.callPackage ./config { inherit plugins; };
           mynvim = pkgs.writeShellScriptBin "nvim" ''
             PATH=$PATH:${pkgs.lib.makeBinPath lsp}
