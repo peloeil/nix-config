@@ -1,0 +1,43 @@
+-- display line number
+vim.opt.number = true
+vim.opt.numberwidth = 5
+--vim.opt.relativenumber = true
+
+-- search options
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- indent
+vim.opt.expandtab = true
+vim.opt.shiftround = true
+vim.opt.shiftwidth = 4
+vim.opt.smartindent = true
+
+-- enconding
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
+vim.opt.fileencodings = "utf-8"
+vim.opt.ambiwidth = "double"
+
+-- scroll off
+vim.opt.scrolloff = 5
+vim.opt.sidescrolloff = 10
+
+-- others
+vim.opt.cursorline = true
+vim.opt.loadplugins = false
+vim.opt.showbreak = "> "
+vim.opt.termguicolors = true
+vim.opt.undofile = true
+vim.opt.wrap = false
+vim.opt.wildignorecase = true
+
+vim.api.nvim_create_augroup("__matchpairs", { clear = true })
+vim.api.nvim_create_autocmd({ "BufNewfile", "BufReadPre" }, {
+    group = "__matchpairs",
+    pattern = { "*.c", "*.cpp", "*.hpp", "*.rs" },
+    callback = function()
+        vim.opt.matchpairs:append("<:>")
+        vim.opt.matchpairs:append("=:;")
+    end,
+})
