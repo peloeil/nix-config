@@ -3,16 +3,28 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+
+    # package manager
     lazy_nvim = {
       url = "github:folke/lazy.nvim";
       flake = false;
     };
-    hop_nvim = {
-      url = "github:smoka7/hop.nvim";
+
+    # LSP
+    nvim_lspconfig = {
+      url = "github:neovim/nvim-lspconfig";
       flake = false;
     };
+
+    # filer
     oil_nvim = {
       url = "github:stevearc/oil.nvim";
+      flake = false;
+    };
+
+    # misc
+    hop_nvim = {
+      url = "github:smoka7/hop.nvim";
       flake = false;
     };
     hlchunk_nvim = {
@@ -39,8 +51,13 @@
         let
           pkgs = nixpkgs.legacyPackages.${system};
           plugins = import ./pkgs/plugins.nix { inherit inputs pkgs; };
+	  lsp = with pkgs; [
+	    nil
+	    lua-language-server
+	  ];
           config = pkgs.callPackage ./pkgs/config.nix { inherit plugins; };
           mynvim = pkgs.writeShellScriptBin "nvim" ''
+	    PATH=$PATH:${pkgs.lib.makeBinPath lsp}
             MY_CONFIG_PATH=${config} ${pkgs.neovim-unwrapped}/bin/nvim -u ${config}/init.lua "$@"
           '';
         in
