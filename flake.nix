@@ -16,6 +16,12 @@
       flake = false;
     };
 
+    # formatter
+    conform_nvim = {
+      url = "github:stevearc/conform.nvim";
+      flake = false;
+    };
+
     # filer
     oil_nvim = {
       url = "github:stevearc/oil.nvim";
@@ -52,14 +58,17 @@
           pkgs = nixpkgs.legacyPackages.${system};
           plugins = import ./config/plugins.nix { inherit inputs pkgs; };
           lsp = import ./config/lsp.nix { inherit pkgs; };
+          fmter = import ./config/formatter.nix { inherit pkgs; };
           config = pkgs.callPackage ./config { inherit plugins; };
-          mynvim = pkgs.writeShellScriptBin "nvim" ''
-            PATH=$PATH:${pkgs.lib.makeBinPath lsp}
-            MY_CONFIG_PATH=${config} ${pkgs.neovim-unwrapped}/bin/nvim -u ${config}/init.lua "$@"
-          '';
+          nvim-with =
+            tools:
+            pkgs.writeShellScriptBin "nvim" ''
+              PATH=$PATH:${pkgs.lib.makeBinPath tools}
+              MY_CONFIG_PATH=${config} ${pkgs.neovim-unwrapped}/bin/nvim -u ${config}/init.lua "$@"
+            '';
         in
         {
-          default = mynvim;
+          default = nvim-with (lsp ++ fmter);
           inherit config;
         }
       );
