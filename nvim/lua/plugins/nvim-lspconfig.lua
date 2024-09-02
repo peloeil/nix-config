@@ -1,5 +1,5 @@
 local server_list = {
-    "nil_ls"
+    "nil_ls",
 }
 
 return {
@@ -13,14 +13,14 @@ return {
         local lspconfig = require("lspconfig")
         for _, server in ipairs(server_list) do
             lspconfig[server].setup({})
-	end
+        end
 
         lspconfig["lua_ls"].setup({
             settings = {
                 Lua = {
-                    diagnostics = { globals = { "vim" }}
-                }
-            }
+                    diagnostics = { globals = { "vim" } },
+                },
+            },
         })
-    end
+    end,
 }

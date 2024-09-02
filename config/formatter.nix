@@ -1,6 +1,6 @@
 { pkgs, ... }:
 with pkgs;
 [
-  nil
-  lua-language-server
+  nixfmt-rfc-style
+  stylua
 ]

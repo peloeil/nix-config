@@ -2,7 +2,7 @@ return {
     name = "oil.nvim",
     dir = "@oil_nvim@",
     keys = {
-        { "-", "<cmd>Oil<CR>"}
+        { "-", "<cmd>Oil<CR>" },
     },
     opts = {},
 }

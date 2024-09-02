@@ -3,7 +3,7 @@ return {
     dir = "@hlchunk_nvim@",
     event = {
         "BufReadPre",
-	"BufNewFile"
+        "BufNewFile",
     },
-    config = true
+    opts = {},
 }
