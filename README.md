@@ -10,15 +10,15 @@ neovim + lazy.nvim でプラグインを管理する flake
 │   ├── init.lua
 │   └── lua
 │       └── plugins
-├── pkgs
-│   ├── config.nix
+├── config
+│   ├── default.nix
 │   ├── lazy_nvim.nix
 │   └── plugins.nix
 └── README.md
 ```
-## `pkgs`
+## `config`
 パッケージ関連の操作を行うファイル
-- `config.nix`
+- `default.nix`
     設定ファイルを nix 内で使えるように置換などをする設定
 - `lazy_nvim.nix`
     `lazy.nvim` はデフォルトで `~/.config/nvim` を見にいってしまうので、これを nix store の設定ディレクトリのパスに変更する設定

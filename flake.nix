@@ -50,14 +50,14 @@
         system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
-          plugins = import ./pkgs/plugins.nix { inherit inputs pkgs; };
-	  lsp = with pkgs; [
-	    nil
-	    lua-language-server
-	  ];
-          config = pkgs.callPackage ./pkgs/config.nix { inherit plugins; };
+          plugins = import ./config/plugins.nix { inherit inputs pkgs; };
+          lsp = with pkgs; [
+            nil
+            lua-language-server
+          ];
+          config = pkgs.callPackage ./config { inherit plugins; };
           mynvim = pkgs.writeShellScriptBin "nvim" ''
-	    PATH=$PATH:${pkgs.lib.makeBinPath lsp}
+            PATH=$PATH:${pkgs.lib.makeBinPath lsp}
             MY_CONFIG_PATH=${config} ${pkgs.neovim-unwrapped}/bin/nvim -u ${config}/init.lua "$@"
           '';
         in

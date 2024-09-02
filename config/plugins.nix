@@ -14,5 +14,5 @@ in
   }
 ) pluginInputs)
 // {
-  lazy_nvim = pkgs.callPackage ../pkgs/lazy_nvim.nix { inherit inputs; };
+  lazy_nvim = pkgs.callPackage ../config/lazy_nvim.nix { inherit inputs; };
 }
