@@ -43,6 +43,10 @@
       url = "github:shellRaining/hlchunk.nvim";
       flake = false;
     };
+    nvim_web_devicons = {
+      url = "github:nvim-tree/nvim-web-devicons";
+      flake = false;
+    };
   };
 
   outputs =
