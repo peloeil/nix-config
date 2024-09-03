@@ -59,7 +59,7 @@
           plugins = import ./config/plugins.nix { inherit inputs pkgs; };
           lsp = import ./config/lsp.nix { inherit pkgs; };
           fmter = import ./config/formatter.nix { inherit pkgs; };
-          config = pkgs.callPackage ./config { inherit plugins; };
+          config = pkgs.callPackage ./config { inherit pkgs plugins; };
           nvim-with =
             tools:
             pkgs.writeShellScriptBin "nvim" ''

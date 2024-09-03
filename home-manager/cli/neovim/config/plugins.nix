@@ -15,4 +15,5 @@ in
 ) pluginInputs)
 // {
   lazy_nvim = pkgs.callPackage ../config/lazy_nvim.nix { inherit inputs; };
+  nvim_treesitter = pkgs.vimPlugins.nvim-treesitter;
 }

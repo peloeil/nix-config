@@ -1,6 +1,14 @@
-{ stdenv, plugins, ... }:
+{
+  pkgs,
+  stdenv,
+  plugins,
+  ...
+}:
 stdenv.mkDerivation (
   plugins
+  // {
+    treesitter_parser = import ./parser.nix { inherit pkgs; };
+  }
   // {
     pname = "peloeil-nvim-config";
     version = "0.0.1";
