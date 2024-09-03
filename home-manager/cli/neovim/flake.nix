@@ -28,6 +28,12 @@
       flake = false;
     };
 
+    # colorscheme
+    gruvbox_nvim = {
+      url = "github:ellisonleao/gruvbox.nvim";
+      flake = false;
+    };
+
     # misc
     hop_nvim = {
       url = "github:smoka7/hop.nvim";

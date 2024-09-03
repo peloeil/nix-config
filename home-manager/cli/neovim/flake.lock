@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "gruvbox_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720105192,
+        "narHash": "sha256-+t9jdpvykfBDgXelDc/3bAOCN7cmu6/TwFoZy47zKUM=",
+        "owner": "ellisonleao",
+        "repo": "gruvbox.nvim",
+        "rev": "7a1b23e4edf73a39642e77508ee6b9cbb8c60f9e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ellisonleao",
+        "repo": "gruvbox.nvim",
+        "type": "github"
+      }
+    },
     "hlchunk_nvim": {
       "flake": false,
       "locked": {
@@ -115,6 +131,7 @@
     "root": {
       "inputs": {
         "conform_nvim": "conform_nvim",
+        "gruvbox_nvim": "gruvbox_nvim",
         "hlchunk_nvim": "hlchunk_nvim",
         "hop_nvim": "hop_nvim",
         "lazy_nvim": "lazy_nvim",
