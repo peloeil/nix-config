@@ -7,6 +7,18 @@ return {
             function()
                 require("conform").format()
             end,
+            ft = {
+                "c",
+                "cpp",
+                "json",
+                "lua",
+                "nix",
+                "python",
+                "rust",
+                "sh",
+                "typst",
+                "yaml",
+            },
         },
     },
     opts = {

@@ -17,7 +17,6 @@ vim.opt.smartindent = true
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 vim.opt.fileencodings = "utf-8"
-vim.opt.ambiwidth = "double"
 
 -- scroll off
 vim.opt.scrolloff = 5
