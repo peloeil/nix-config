@@ -128,6 +128,22 @@
         "type": "github"
       }
     },
+    "nvim_surround": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1719245706,
+        "narHash": "sha256-DCNfT//qMnzIu4V9or3Q39h4XzLz9P4twtHnQHV2rrQ=",
+        "owner": "kylechui",
+        "repo": "nvim-surround",
+        "rev": "ec2dc7671067e0086cdf29c2f5df2dd909d5f71f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kylechui",
+        "repo": "nvim-surround",
+        "type": "github"
+      }
+    },
     "nvim_web_devicons": {
       "flake": false,
       "locked": {
@@ -170,6 +186,7 @@
         "nixpkgs": "nixpkgs",
         "nvim_autopairs": "nvim_autopairs",
         "nvim_lspconfig": "nvim_lspconfig",
+        "nvim_surround": "nvim_surround",
         "nvim_web_devicons": "nvim_web_devicons",
         "oil_nvim": "oil_nvim"
       }

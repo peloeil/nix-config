@@ -51,6 +51,10 @@
       url = "github:windwp/nvim-autopairs";
       flake = false;
     };
+    nvim_surround = {
+      url = "github:kylechui/nvim-surround";
+      flake = false;
+    };
   };
 
   outputs =
