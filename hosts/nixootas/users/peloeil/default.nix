@@ -21,7 +21,6 @@
       "zoom"
       "vscode"
       "vscode-extension-ms-vscode-cpptools"
-      "unityhub"
     ];
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
@@ -37,6 +36,5 @@
     rye
     unzip
     chromium
-    unityhub
   ];
 }
