@@ -1,17 +1,26 @@
 return {
     name = "conform.nvim",
     dir = "@conform_nvim@",
-    event = {
-        "BufWritePre",
+    keys = {
+        {
+            "<leader>lf",
+            function()
+                require("conform").format()
+            end,
+        },
     },
     opts = {
-        format_on_save = {
-            timeout_ms = 500,
-            lsp_format = "fallback",
-        },
         formatters_by_ft = {
+            c = { "clang-format" },
+            cpp = { "clang-format" },
+            json = { "jq" },
             lua = { "stylua" },
-            nix = { "nixfmt-rfc-style" },
+            nix = { "nixfmt" },
+            python = { "ruff_organize_import", "ruff_format", "ruff_fix" },
+            rust = { "rustfmt" },
+            sh = { "shellcheck", "shfmt" },
+            typst = { "typstyle" },
+            yaml = { "yamlfix" },
         },
         formatters = {
             stylua = {
