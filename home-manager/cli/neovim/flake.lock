@@ -112,6 +112,22 @@
         "type": "github"
       }
     },
+    "nvim_colorizer": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1715313687,
+        "narHash": "sha256-gjO89Sx335PqVgceM9DBfcVozNjovC8KML1OZCRNMGw=",
+        "owner": "norcalli",
+        "repo": "nvim-colorizer.lua",
+        "rev": "a065833f35a3a7cc3ef137ac88b5381da2ba302e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "norcalli",
+        "repo": "nvim-colorizer.lua",
+        "type": "github"
+      }
+    },
     "nvim_lspconfig": {
       "flake": false,
       "locked": {
@@ -185,6 +201,7 @@
         "lazy_nvim": "lazy_nvim",
         "nixpkgs": "nixpkgs",
         "nvim_autopairs": "nvim_autopairs",
+        "nvim_colorizer": "nvim_colorizer",
         "nvim_lspconfig": "nvim_lspconfig",
         "nvim_surround": "nvim_surround",
         "nvim_web_devicons": "nvim_web_devicons",

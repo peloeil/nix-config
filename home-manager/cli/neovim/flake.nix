@@ -47,6 +47,10 @@
       url = "github:nvim-tree/nvim-web-devicons";
       flake = false;
     };
+    nvim_colorizer = {
+      url = "github:norcalli/nvim-colorizer.lua";
+      flake = false;
+    };
     nvim_autopairs = {
       url = "github:windwp/nvim-autopairs";
       flake = false;
