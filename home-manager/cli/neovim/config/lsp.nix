@@ -1,6 +1,14 @@
 { pkgs, ... }:
 with pkgs;
 [
-  nil
-  lua-language-server
+  bash-language-server # bash
+  clang-tools # C/C++ (clangd)
+  docker-compose-language-service # docker-compose
+  dockerfile-language-server-nodejs # dockerfile
+  lua-language-server # lua
+  nil # nix
+  ruff-lsp # python
+  rust-analyzer # rust
+  tinymist # typst
+  yaml-language-server # yaml
 ]
