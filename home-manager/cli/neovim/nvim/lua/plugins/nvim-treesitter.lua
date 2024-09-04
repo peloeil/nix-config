@@ -5,12 +5,13 @@ return {
         "BufNewFile",
         "BufReadPre",
     },
-    opts = {
-        auto_install = false,
-        highlight = { enable = true },
-        indent = { enable = true },
-    },
-    config = function()
+    opts = function(_, _)
+        local opts = {
+            auto_install = false,
+            highlight = { enable = true },
+            indent = { enable = true },
+        }
         vim.opt.runtimepath:append("@treesitter_parser@")
+        return opts
     end,
 }

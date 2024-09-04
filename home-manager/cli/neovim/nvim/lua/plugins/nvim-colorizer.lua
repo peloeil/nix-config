@@ -3,7 +3,7 @@ return {
     dir = "@nvim_colorizer@",
     event = {
         "BufNewFile",
-        "BufReadPre"
+        "BufReadPre",
     },
     -- `require("colorizer").setup({})` does not work ...
     -- so `opts = {}` can't be used.

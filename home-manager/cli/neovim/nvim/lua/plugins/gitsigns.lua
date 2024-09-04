@@ -2,8 +2,7 @@ return {
     name = "gitsigns.nvim",
     dir = "@gitsigns_nvim@",
     event = {
-        "BufReadPre",
-        "BufNewFile",
+        "BufWinEnter",
     },
     opts = {
         on_attach = function(bufnr)

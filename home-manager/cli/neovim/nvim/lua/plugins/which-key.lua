@@ -2,7 +2,7 @@ return {
     name = "which-key.nvim",
     dir = "@which_key_nvim@",
     event = {
-        "VeryLazy",
+        "BufWinEnter",
     },
     keys = {
         {
