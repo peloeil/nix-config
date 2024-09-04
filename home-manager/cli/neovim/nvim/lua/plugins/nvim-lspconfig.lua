@@ -42,8 +42,8 @@ return {
         "yaml",
     },
     event = {
-        "BufReadPre",
         "BufNewFile",
+        "BufEnter",
     },
     dependencies = {
         name = "cmp-nvim-lsp",

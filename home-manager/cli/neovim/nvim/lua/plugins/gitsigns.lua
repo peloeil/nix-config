@@ -2,8 +2,8 @@ return {
     name = "gitsigns.nvim",
     dir = "@gitsigns_nvim@",
     event = {
-        "BufEnter",
         "BufNewFile",
+        "BufEnter",
     },
     opts = {
         linehl = false,

@@ -2,8 +2,7 @@ return {
     name = "lualine.nvim",
     dir = "@lualine_nvim@",
     event = {
-        "BufReadPre",
-        "BufNewFile",
+        "UIEnter",
     },
     dependencies = {
         name = "nvim-web-devicons",

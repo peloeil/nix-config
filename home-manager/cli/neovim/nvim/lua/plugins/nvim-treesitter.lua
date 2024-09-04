@@ -3,7 +3,7 @@ return {
     dir = "@nvim_treesitter@",
     event = {
         "BufNewFile",
-        "BufReadPre",
+        "BufEnter",
     },
     opts = function(_, _)
         vim.opt.runtimepath:append("@treesitter_parser@")

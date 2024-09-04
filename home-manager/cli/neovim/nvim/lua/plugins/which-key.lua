@@ -1,10 +1,8 @@
 return {
     name = "which-key.nvim",
     dir = "@which_key_nvim@",
-    event = {
-        "BufWinEnter",
-    },
     keys = {
+        { "<leader>" },
         {
             "<leader>?",
             function()

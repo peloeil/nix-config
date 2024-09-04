@@ -19,6 +19,7 @@ return {
                 "typst",
                 "yaml",
             },
+            { desc = "format buffer" },
         },
     },
     opts = {
