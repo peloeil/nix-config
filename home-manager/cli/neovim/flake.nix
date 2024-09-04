@@ -28,9 +28,13 @@
       flake = false;
     };
 
-    # colorscheme
+    # UI
     gruvbox_nvim = {
       url = "github:ellisonleao/gruvbox.nvim";
+      flake = false;
+    };
+    lualine_nvim = {
+      url = "github:nvim-lualine/lualine.nvim";
       flake = false;
     };
 
