@@ -67,6 +67,10 @@
       url = "github:lewis6991/gitsigns.nvim";
       flake = false;
     };
+    which_key_nvim = {
+      url = "github:folke/which-key.nvim";
+      flake = false;
+    };
   };
 
   outputs =

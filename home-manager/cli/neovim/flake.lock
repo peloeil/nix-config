@@ -239,7 +239,24 @@
         "nvim_lspconfig": "nvim_lspconfig",
         "nvim_surround": "nvim_surround",
         "nvim_web_devicons": "nvim_web_devicons",
-        "oil_nvim": "oil_nvim"
+        "oil_nvim": "oil_nvim",
+        "which_key_nvim": "which_key_nvim"
+      }
+    },
+    "which_key_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725088492,
+        "narHash": "sha256-FY0KM0F2keMCqB5QhwfGS4w2wQOOeCXgZEa3U7Q1Bek=",
+        "owner": "folke",
+        "repo": "which-key.nvim",
+        "rev": "bfec3d6bc0a9b0b2cb11644642f78c2c3915eef0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "which-key.nvim",
+        "type": "github"
       }
     }
   },
