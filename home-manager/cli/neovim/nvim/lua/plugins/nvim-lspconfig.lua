@@ -45,12 +45,20 @@ return {
         "BufReadPre",
         "BufNewFile",
     },
+    dependencies = {
+        name = "cmp-nvim-lsp",
+        dir = "@cmp_nvim_lsp@",
+    },
     config = function()
         local lspconfig = require("lspconfig")
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
         for _, server in ipairs(server_list) do
-            lspconfig[server].setup({})
+            lspconfig[server].setup({
+                capabilities = capabilities,
+            })
         end
         lspconfig["lua_ls"].setup({
+            capabilities = capabilities,
             settings = {
                 Lua = {
                     diagnostics = { globals = { "vim" } },

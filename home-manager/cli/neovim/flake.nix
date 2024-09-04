@@ -10,6 +10,36 @@
       flake = false;
     };
 
+    # completion
+    nvim_cmp = {
+      url = "github:hrsh7th/nvim-cmp";
+      flake = false;
+    };
+    nvim_snippy = {
+      url = "github:dcampos/nvim-snippy";
+      flake = false;
+    };
+    cmp_snippy = {
+      url = "github:dcampos/cmp-snippy";
+      flake = false;
+    };
+    cmp_buffer = {
+      url = "github:hrsh7th/cmp-buffer";
+      flake = false;
+    };
+    cmp_path = {
+      url = "github:hrsh7th/cmp-path";
+      flake = false;
+    };
+    cmp_cmdline = {
+      url = "github:hrsh7th/cmp-cmdline";
+      flake = false;
+    };
+    cmp_nvim_lsp = {
+      url = "github:hrsh7th/cmp-nvim-lsp";
+      flake = false;
+    };
+
     # LSP
     nvim_lspconfig = {
       url = "github:neovim/nvim-lspconfig";
