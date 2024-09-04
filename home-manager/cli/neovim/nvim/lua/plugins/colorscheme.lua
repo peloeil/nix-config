@@ -7,14 +7,17 @@ return {
             "VimEnter",
         },
         opts = {
+            terminal_colors = true,
             italic = {
-                strings = false, -- ??
+                strings = false,
                 emphasis = false,
                 comments = false,
                 folds = false,
             },
+            transparent_mode = true,
         },
-        config = function()
+        config = function(_, opts)
+            require("gruvbox").setup(opts)
             vim.opt.background = "dark"
             vim.cmd("colorscheme gruvbox")
         end,
