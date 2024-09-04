@@ -66,7 +66,7 @@ return {
         vim.keymap.set("n", "<leader>ln", vim.lsp.buf.rename, opt)
 
         -- highlight
-        vim.opt.updatetime = 500
+        vim.opt.updatetime = 1000
         local group_id = vim.api.nvim_create_augroup("__doc_highlight", { clear = true })
         vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
             pattern = valid_patterns,
