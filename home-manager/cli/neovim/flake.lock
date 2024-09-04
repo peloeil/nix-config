@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "gitsigns_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724836172,
+        "narHash": "sha256-dy5Hc2yQMZ150G4mRyfSJe9nCMlW+4l548IQfzgoGUM=",
+        "owner": "lewis6991",
+        "repo": "gitsigns.nvim",
+        "rev": "899e993850084ea33d001ec229d237bc020c19ae",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lewis6991",
+        "repo": "gitsigns.nvim",
+        "type": "github"
+      }
+    },
     "gruvbox_nvim": {
       "flake": false,
       "locked": {
@@ -195,6 +211,7 @@
     "root": {
       "inputs": {
         "conform_nvim": "conform_nvim",
+        "gitsigns_nvim": "gitsigns_nvim",
         "gruvbox_nvim": "gruvbox_nvim",
         "hlchunk_nvim": "hlchunk_nvim",
         "hop_nvim": "hop_nvim",

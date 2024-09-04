@@ -59,6 +59,10 @@
       url = "github:kylechui/nvim-surround";
       flake = false;
     };
+    gitsigns_nvim = {
+      url = "github:lewis6991/gitsigns.nvim";
+      flake = false;
+    };
   };
 
   outputs =
