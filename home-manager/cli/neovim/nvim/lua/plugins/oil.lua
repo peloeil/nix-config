@@ -28,6 +28,9 @@ return {
             "mtime",
         },
         git = {
+            add = function(_, _)
+                return true
+            end,
             mv = function(_, _)
                 return true
             end,

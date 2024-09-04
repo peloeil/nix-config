@@ -6,12 +6,11 @@ return {
         "BufReadPre",
     },
     opts = function(_, _)
-        local opts = {
+        vim.opt.runtimepath:append("@treesitter_parser@")
+        return {
             auto_install = false,
             highlight = { enable = true },
             indent = { enable = true },
         }
-        vim.opt.runtimepath:append("@treesitter_parser@")
-        return opts
     end,
 }

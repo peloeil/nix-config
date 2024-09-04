@@ -7,7 +7,7 @@ return {
     opts = {
         on_attach = function(bufnr)
             local gitsigns = require("gitsigns")
-            local opts = { buffer = bufnr, noremap = true }
+            local opts = { buffer = bufnr }
             -- stage
             vim.keymap.set("n", "<leader>gsh", gitsigns.stage_hunk, opts)
             vim.keymap.set("n", "<leader>gsh", function()

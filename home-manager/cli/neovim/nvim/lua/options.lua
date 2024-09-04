@@ -31,9 +31,8 @@ vim.opt.undofile = true
 vim.opt.wrap = false
 vim.opt.wildignorecase = true
 
-vim.api.nvim_create_augroup("__matchpairs", { clear = true })
 vim.api.nvim_create_autocmd({ "BufNewfile", "BufReadPre" }, {
-    group = "__matchpairs",
+    group = vim.api.nvim_create_augroup("__matchpairs", {}),
     pattern = { "*.c", "*.cpp", "*.hpp", "*.rs" },
     callback = function()
         vim.opt.matchpairs:append("<:>")

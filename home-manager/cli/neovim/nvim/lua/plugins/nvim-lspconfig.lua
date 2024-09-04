@@ -67,7 +67,7 @@ return {
         })
 
         -- keymaps
-        local opt = { noremap = true, silent = true }
+        local opt = { silent = true }
         vim.keymap.set("n", "K", vim.lsp.buf.hover, opt)
         vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, opt)
         vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, opt)
@@ -77,13 +77,13 @@ return {
         vim.opt.updatetime = 1000
         local group_id = vim.api.nvim_create_augroup("__doc_highlight", { clear = true })
         vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-            pattern = valid_patterns,
             group = group_id,
+            pattern = valid_patterns,
             callback = vim.lsp.buf.document_highlight,
         })
         vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
-            pattern = valid_patterns,
             group = group_id,
+            pattern = valid_patterns,
             callback = vim.lsp.buf.clear_references,
         })
     end,

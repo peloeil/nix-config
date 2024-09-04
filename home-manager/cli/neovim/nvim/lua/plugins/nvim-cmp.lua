@@ -47,10 +47,6 @@ return {
                 { name = "buffer" },
             }),
         }
-        return opts
-    end,
-    config = function(_, _)
-        local cmp = require("cmp")
         cmp.setup.cmdline({ "/", "?" }, {
             mapping = cmp.mapping.preset.cmdline(),
             sources = {
@@ -68,5 +64,6 @@ return {
                 disallow_symbol_nonprefix_matching = false,
             },
         })
+        return opts
     end,
 }

@@ -1,5 +1,4 @@
-local opt = { noremap = true, silent = true }
-
+local opt = { silent = true }
 -- insert mode keymaps
 vim.keymap.set("i", "jj", "<esc>", opt)
 vim.keymap.set("i", "<C-h>", "<left>", opt)
@@ -15,9 +14,8 @@ vim.keymap.set("n", "k", "gk", opt)
 vim.keymap.set("n", "<leader><esc>", "<cmd>nohlsearch<cr>", opt)
 
 -- terminal mode keymaps
-vim.api.nvim_create_augroup("__terminal", { clear = true })
 vim.api.nvim_create_autocmd("TermOpen", {
-    group = "__terminal",
+    group = vim.api.nvim_create_augroup("__terminal_mode", {}),
     callback = function()
         vim.cmd("startinsert")
         vim.wo.number = false
