@@ -12,9 +12,9 @@ return {
             local gitsigns = require("gitsigns")
             local function bufnr_with(desc)
                 if desc == nil then
-                    return { buffer = bufnr }
+                    return { buffer = bufnr, silent = true }
                 else
-                    return { buffer = bufnr, desc = desc }
+                    return { buffer = bufnr, silent = true, desc = desc }
                 end
             end
             vim.keymap.set("n", "<leader>gs", gitsigns.stage_hunk, bufnr_with("stage hunk"))

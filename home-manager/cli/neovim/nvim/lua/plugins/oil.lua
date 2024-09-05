@@ -7,12 +7,14 @@ return {
             function()
                 require("oil").open()
             end,
+            silent = true,
         },
         {
             "<leader>-",
             function()
                 require("oil").open_float()
             end,
+            silent = true,
         },
     },
     dependencies = {

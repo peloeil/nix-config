@@ -7,7 +7,8 @@ return {
             function()
                 require("hop").hint_char1()
             end,
-            { remap = true },
+            silent = true,
+            remap = true,
         },
     },
     opts = {},
