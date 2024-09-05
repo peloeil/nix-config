@@ -113,6 +113,10 @@
       url = "github:stevearc/aerial.nvim";
       flake = false;
     };
+    alpha_nvim = {
+      url = "github:goolord/alpha-nvim";
+      flake = false;
+    };
   };
 
   outputs =

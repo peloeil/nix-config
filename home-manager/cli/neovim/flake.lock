@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "alpha_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724084627,
+        "narHash": "sha256-gvPEmjM36Z7Q8K83/0ZVLN6J/2mDfEZJ7cW1u+FWf/8=",
+        "owner": "goolord",
+        "repo": "alpha-nvim",
+        "rev": "b6f4129302db197a7249e67a90de3f2b676de13e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "goolord",
+        "repo": "alpha-nvim",
+        "type": "github"
+      }
+    },
     "cmp_buffer": {
       "flake": false,
       "locked": {
@@ -355,6 +371,7 @@
     "root": {
       "inputs": {
         "aerial_nvim": "aerial_nvim",
+        "alpha_nvim": "alpha_nvim",
         "cmp_buffer": "cmp_buffer",
         "cmp_cmdline": "cmp_cmdline",
         "cmp_nvim_lsp": "cmp_nvim_lsp",
