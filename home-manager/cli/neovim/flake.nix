@@ -105,6 +105,10 @@
       url = "github:akinsho/toggleterm.nvim";
       flake = false;
     };
+    trouble_nvim = {
+      url = "github:folke/trouble.nvim";
+      flake = false;
+    };
   };
 
   outputs =

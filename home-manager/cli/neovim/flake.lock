@@ -360,6 +360,7 @@
         "nvim_web_devicons": "nvim_web_devicons",
         "oil_nvim": "oil_nvim",
         "toggleterm_nvim": "toggleterm_nvim",
+        "trouble_nvim": "trouble_nvim",
         "which_key_nvim": "which_key_nvim"
       }
     },
@@ -376,6 +377,22 @@
       "original": {
         "owner": "akinsho",
         "repo": "toggleterm.nvim",
+        "type": "github"
+      }
+    },
+    "trouble_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1721651093,
+        "narHash": "sha256-db/riM3Kq+QgGUqRxJHA4HYXJE31276hrUrDj4UhC2g=",
+        "owner": "folke",
+        "repo": "trouble.nvim",
+        "rev": "6efc446226679fda0547c0fd6a7892fd5f5b15d8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "trouble.nvim",
         "type": "github"
       }
     },
