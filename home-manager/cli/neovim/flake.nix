@@ -101,6 +101,10 @@
       url = "github:folke/which-key.nvim";
       flake = false;
     };
+    toggleterm_nvim = {
+      url = "github:akinsho/toggleterm.nvim";
+      flake = false;
+    };
   };
 
   outputs =
