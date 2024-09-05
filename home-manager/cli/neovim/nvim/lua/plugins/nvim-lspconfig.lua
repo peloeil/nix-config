@@ -49,7 +49,7 @@ return {
         name = "cmp-nvim-lsp",
         dir = "@cmp_nvim_lsp@",
     },
-    config = function()
+    config = function(_, _)
         local lspconfig = require("lspconfig")
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         for _, server in ipairs(server_list) do

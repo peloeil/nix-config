@@ -27,7 +27,24 @@ return {
     },
     opts = function(_, _)
         local cmp = require("cmp")
-        local opts = {
+        cmp.setup.cmdline({ "/", "?" }, {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = {
+                { name = "buffer" },
+            },
+        })
+        cmp.setup.cmdline(":", {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = cmp.config.sources({
+                { name = "path" },
+            }, {
+                { name = "cmdline" },
+            }),
+            matching = {
+                disallow_symbol_nonprefix_matching = false,
+            },
+        })
+        return {
             snippet = {
                 expand = function(args)
                     require("snippy").expand_snippet(args.body)
@@ -47,23 +64,5 @@ return {
                 { name = "buffer" },
             }),
         }
-        cmp.setup.cmdline({ "/", "?" }, {
-            mapping = cmp.mapping.preset.cmdline(),
-            sources = {
-                { name = "buffer" },
-            },
-        })
-        cmp.setup.cmdline(":", {
-            mapping = cmp.mapping.preset.cmdline(),
-            sources = cmp.config.sources({
-                { name = "path" },
-            }, {
-                { name = "cmdline" },
-            }),
-            matching = {
-                disallow_symbol_nonprefix_matching = false,
-            },
-        })
-        return opts
     end,
 }
