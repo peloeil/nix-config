@@ -109,6 +109,10 @@
       url = "github:folke/trouble.nvim";
       flake = false;
     };
+    aerial_nvim = {
+      url = "github:stevearc/aerial.nvim";
+      flake = false;
+    };
   };
 
   outputs =

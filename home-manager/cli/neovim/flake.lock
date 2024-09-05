@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "aerial_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725035685,
+        "narHash": "sha256-eGI5yF3UwHy6wcFWW4tAhi1o3uyK3yi5IPI5DUiNY20=",
+        "owner": "stevearc",
+        "repo": "aerial.nvim",
+        "rev": "b59e01e4380932b375ecff165b48a9400c4af929",
+        "type": "github"
+      },
+      "original": {
+        "owner": "stevearc",
+        "repo": "aerial.nvim",
+        "type": "github"
+      }
+    },
     "cmp_buffer": {
       "flake": false,
       "locked": {
@@ -338,6 +354,7 @@
     },
     "root": {
       "inputs": {
+        "aerial_nvim": "aerial_nvim",
         "cmp_buffer": "cmp_buffer",
         "cmp_cmdline": "cmp_cmdline",
         "cmp_nvim_lsp": "cmp_nvim_lsp",
