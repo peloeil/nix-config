@@ -20,14 +20,6 @@ return {
             desc = "live grep",
         },
         {
-            "<leader>fb",
-            function()
-                require("telescope.builtin").buffers()
-            end,
-            silent = true,
-            desc = "list buffers",
-        },
-        {
             "<leader>fh",
             function()
                 require("telescope.builtin").help_tags()
@@ -53,6 +45,11 @@ return {
                 "--column",
                 "--smart-case",
                 "-uu",
+            },
+        },
+        extensions = {
+            file_browser = {
+                hijack_netrw = true,
             },
         },
     },

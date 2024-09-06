@@ -410,11 +410,28 @@
         "nvim_web_devicons": "nvim_web_devicons",
         "oil_nvim": "oil_nvim",
         "plenary_nvim": "plenary_nvim",
+        "telescope_file_browser_nvim": "telescope_file_browser_nvim",
         "telescope_frecency_nvim": "telescope_frecency_nvim",
         "telescope_nvim": "telescope_nvim",
         "toggleterm_nvim": "toggleterm_nvim",
         "trouble_nvim": "trouble_nvim",
         "which_key_nvim": "which_key_nvim"
+      }
+    },
+    "telescope_file_browser_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725527113,
+        "narHash": "sha256-Ij+rSXvbIc/6YMbfjN6VDCfu6jXV0K5mf+NzNSVgB50=",
+        "owner": "nvim-telescope",
+        "repo": "telescope-file-browser.nvim",
+        "rev": "c5a14e0550699a7db575805cdb9ddc969ba0f1f5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-telescope",
+        "repo": "telescope-file-browser.nvim",
+        "type": "github"
       }
     },
     "telescope_frecency_nvim": {
