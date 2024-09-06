@@ -410,10 +410,27 @@
         "nvim_web_devicons": "nvim_web_devicons",
         "oil_nvim": "oil_nvim",
         "plenary_nvim": "plenary_nvim",
+        "telescope_frecency_nvim": "telescope_frecency_nvim",
         "telescope_nvim": "telescope_nvim",
         "toggleterm_nvim": "toggleterm_nvim",
         "trouble_nvim": "trouble_nvim",
         "which_key_nvim": "which_key_nvim"
+      }
+    },
+    "telescope_frecency_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725546995,
+        "narHash": "sha256-o0llkBncg7rluoTn9/LGpscf8gMou2Ps0xRZY0JFal8=",
+        "owner": "nvim-telescope",
+        "repo": "telescope-frecency.nvim",
+        "rev": "dbca328c590a1aea6efb0dcfd6f594794a348b05",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-telescope",
+        "repo": "telescope-frecency.nvim",
+        "type": "github"
       }
     },
     "telescope_nvim": {

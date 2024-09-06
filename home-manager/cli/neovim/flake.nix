@@ -125,6 +125,10 @@
       url = "github:nvim-telescope/telescope.nvim";
       flake = false;
     };
+    telescope_frecency_nvim = {
+      url = "github:nvim-telescope/telescope-frecency.nvim";
+      flake = false;
+    };
   };
 
   outputs =
