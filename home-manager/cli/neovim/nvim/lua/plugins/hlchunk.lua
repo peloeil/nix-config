@@ -2,8 +2,8 @@ return {
     name = "hlchunk.nvim",
     dir = "@hlchunk_nvim@",
     event = {
-        "CursorMoved",
-        "CursorMovedI",
+        "BufNewFile",
+        "BufReadPost",
     },
     opts = {
         chunk = {

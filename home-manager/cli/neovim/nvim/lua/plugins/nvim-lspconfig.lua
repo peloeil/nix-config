@@ -29,21 +29,9 @@ local valid_patterns = {
 return {
     name = "nvim-lspconfig",
     dir = "@nvim_lspconfig@",
-    ft = {
-        "sh",
-        "c",
-        "cpp",
-        "dockerfile",
-        "lua",
-        "nix",
-        "python",
-        "rust",
-        "typst",
-        "yaml",
-    },
     event = {
-        "BufNewFile",
-        "BufEnter",
+        "BufNewFile  *.sh,*.c,*.h,*.cpp,*.hpp,*Dockerfile,*.lua,*.nix,*.py,*.rs,*.typ,*.yaml,*.yml",
+        "BufReadPost *.sh,*.c,*.h,*.cpp,*.hpp,*Dockerfile,*.lua,*.nix,*.py,*.rs,*.typ,*.yaml,*.yml",
     },
     dependencies = {
         name = "cmp-nvim-lsp",

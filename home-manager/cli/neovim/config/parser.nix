@@ -7,10 +7,6 @@ pkgs.lib.pipe
       cpp
       dockerfile
       fish
-      git_config
-      git_rebase
-      gitcommit
-      gitignore
       go
       html
       javascript
@@ -25,7 +21,6 @@ pkgs.lib.pipe
       nix
       python
       rust
-      ssh_config
       toml
       tsx
       typescript

@@ -3,7 +3,7 @@ return {
     dir = "@gitsigns_nvim@",
     event = {
         "BufNewFile",
-        "BufEnter",
+        "BufReadPost",
     },
     opts = {
         linehl = false,

@@ -4,9 +4,12 @@ return {
     dependencies = {
         { name = "nvim-web-devicons", dir = "@nvim_web_devicons@" },
     },
-    event = {
-        "VimEnter",
-    },
+    event = function(_, _)
+        if vim.fn.argc() == 0 then
+            return { "VimEnter" }
+        end
+        return {}
+    end,
     opts = function(_, _)
         return require("alpha.themes.startify").config
     end,
