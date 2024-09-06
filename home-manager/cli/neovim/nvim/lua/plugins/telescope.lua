@@ -30,6 +30,7 @@ return {
     },
     dependencies = {
         { name = "plenary.nvim", dir = "@plenary_nvim@" },
+        { name = "telescope-fzf-native.nvim", dir = "@telescope_fzf_native_nvim@" },
     },
     opts = {
         defaults = {
@@ -53,4 +54,8 @@ return {
             },
         },
     },
+    config = function(_, opts)
+        require("telescope").setup(opts)
+        require("telescope").load_extension("fzf")
+    end,
 }

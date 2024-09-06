@@ -412,6 +412,7 @@
         "plenary_nvim": "plenary_nvim",
         "telescope_file_browser_nvim": "telescope_file_browser_nvim",
         "telescope_frecency_nvim": "telescope_frecency_nvim",
+        "telescope_fzf_native_nvim": "telescope_fzf_native_nvim",
         "telescope_nvim": "telescope_nvim",
         "toggleterm_nvim": "toggleterm_nvim",
         "trouble_nvim": "trouble_nvim",
@@ -447,6 +448,22 @@
       "original": {
         "owner": "nvim-telescope",
         "repo": "telescope-frecency.nvim",
+        "type": "github"
+      }
+    },
+    "telescope_fzf_native_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1719928246,
+        "narHash": "sha256-GEhPf1f0jkEuDlHNuxVko0ChvuF/zoQroLNUlk8N5EA=",
+        "owner": "nvim-telescope",
+        "repo": "telescope-fzf-native.nvim",
+        "rev": "cf48d4dfce44e0b9a2e19a008d6ec6ea6f01a83b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-telescope",
+        "repo": "telescope-fzf-native.nvim",
         "type": "github"
       }
     },

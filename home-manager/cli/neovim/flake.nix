@@ -133,6 +133,10 @@
       url = "github:nvim-telescope/telescope-file-browser.nvim";
       flake = false;
     };
+    telescope_fzf_native_nvim = {
+      url = "github:nvim-telescope/telescope-fzf-native.nvim";
+      flake = false;
+    };
   };
 
   outputs =
