@@ -368,6 +368,22 @@
         "type": "github"
       }
     },
+    "plenary_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724044857,
+        "narHash": "sha256-6Gm+4zZ80quI5iAW6qPAWTq9h1csPWkZFZ9KnFgYRM0=",
+        "owner": "nvim-lua",
+        "repo": "plenary.nvim",
+        "rev": "ec289423a1693aeae6cd0d503bac2856af74edaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-lua",
+        "repo": "plenary.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "aerial_nvim": "aerial_nvim",
@@ -393,9 +409,27 @@
         "nvim_surround": "nvim_surround",
         "nvim_web_devicons": "nvim_web_devicons",
         "oil_nvim": "oil_nvim",
+        "plenary_nvim": "plenary_nvim",
+        "telescope_nvim": "telescope_nvim",
         "toggleterm_nvim": "toggleterm_nvim",
         "trouble_nvim": "trouble_nvim",
         "which_key_nvim": "which_key_nvim"
+      }
+    },
+    "telescope_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1723686624,
+        "narHash": "sha256-rNzfnORvbKoglt20i/rKmlkysPUBlB89F6dRKgB5MKU=",
+        "owner": "nvim-telescope",
+        "repo": "telescope.nvim",
+        "rev": "5972437de807c3bc101565175da66a1aa4f8707a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-telescope",
+        "repo": "telescope.nvim",
+        "type": "github"
       }
     },
     "toggleterm_nvim": {

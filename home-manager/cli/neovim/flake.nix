@@ -117,6 +117,14 @@
       url = "github:goolord/alpha-nvim";
       flake = false;
     };
+    plenary_nvim = {
+      url = "github:nvim-lua/plenary.nvim";
+      flake = false;
+    };
+    telescope_nvim = {
+      url = "github:nvim-telescope/telescope.nvim";
+      flake = false;
+    };
   };
 
   outputs =
