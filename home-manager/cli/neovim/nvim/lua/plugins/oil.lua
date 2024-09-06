@@ -17,6 +17,18 @@ return {
             silent = true,
         },
     },
+    event = function(_, _)
+        local argc = vim.fn.argc()
+        local idx = 0
+        while idx < argc do
+            local arg = vim.fn.argv(idx)
+            if vim.fn.isdirectory(arg) == 1 then
+                return { "VimEnter" }
+            end
+            idx = idx + 1
+        end
+        return {}
+    end,
     dependencies = {
         name = "nvim-web-devicons",
         dir = "@nvim_web_devicons@",
