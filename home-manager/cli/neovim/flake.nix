@@ -155,6 +155,7 @@
           plugins = import ./config/plugins.nix { inherit inputs pkgs; };
           lsp = import ./config/lsp.nix { inherit pkgs; };
           fmter = import ./config/formatter.nix { inherit pkgs; };
+          tools = import ./config/tools.nix { inherit pkgs; };
           config = pkgs.callPackage ./config { inherit pkgs plugins; };
           nvim-with =
             tools:
@@ -164,7 +165,7 @@
             '';
         in
         {
-          default = nvim-with (lsp ++ fmter);
+          default = nvim-with (lsp ++ fmter ++ tools);
           inherit config;
         }
       );
