@@ -52,10 +52,21 @@ return {
             file_browser = {
                 hijack_netrw = true,
             },
+            aerial = {
+                format_symbol = function(symbol_path, filetype)
+                    if filetype == "json" or filetype == "yaml" then
+                        return table.concat(symbol_path, ".")
+                    else
+                        return symbol_path[#symbol_path]
+                    end
+                end,
+                show_columns = "both",
+            },
         },
     },
     config = function(_, opts)
-        require("telescope").setup(opts)
-        require("telescope").load_extension("fzf")
+        local telescope = require("telescope")
+        telescope.setup(opts)
+        telescope.load_extension("fzf")
     end,
 }
