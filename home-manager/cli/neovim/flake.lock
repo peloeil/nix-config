@@ -416,6 +416,22 @@
         "type": "github"
       }
     },
+    "render_markdown_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725233241,
+        "narHash": "sha256-VCGAkcUIynRTErcGlaMWd+uo2KN1f3suPpGEimAhWHM=",
+        "owner": "MeanderingProgrammer",
+        "repo": "render-markdown.nvim",
+        "rev": "2f9d4f0be8784ed4fef5960eb7b80bf60c5fdf56",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MeanderingProgrammer",
+        "repo": "render-markdown.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "aerial_nvim": "aerial_nvim",
@@ -444,6 +460,7 @@
         "obsidian_nvim": "obsidian_nvim",
         "oil_nvim": "oil_nvim",
         "plenary_nvim": "plenary_nvim",
+        "render_markdown_nvim": "render_markdown_nvim",
         "telescope_file_browser_nvim": "telescope_file_browser_nvim",
         "telescope_frecency_nvim": "telescope_frecency_nvim",
         "telescope_fzf_native_nvim": "telescope_fzf_native_nvim",

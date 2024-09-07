@@ -125,6 +125,10 @@
       url = "github:epwalsh/obsidian.nvim";
       flake = false;
     };
+    render_markdown_nvim = {
+      url = "github:MeanderingProgrammer/render-markdown.nvim";
+      flake = false;
+    };
     plenary_nvim = {
       url = "github:nvim-lua/plenary.nvim";
       flake = false;
