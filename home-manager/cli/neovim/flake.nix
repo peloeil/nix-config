@@ -121,6 +121,10 @@
       url = "github:oflisback/obsidian-bridge.nvim";
       flake = false;
     };
+    obsidian_nvim = {
+      url = "github:epwalsh/obsidian.nvim";
+      flake = false;
+    };
     plenary_nvim = {
       url = "github:nvim-lua/plenary.nvim";
       flake = false;

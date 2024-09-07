@@ -368,6 +368,22 @@
         "type": "github"
       }
     },
+    "obsidian_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722536347,
+        "narHash": "sha256-mbq7fAPmlwOAbWlN3lGX9WGBKTV8cAPZx8pnRCyszJc=",
+        "owner": "epwalsh",
+        "repo": "obsidian.nvim",
+        "rev": "14e0427bef6c55da0d63f9a313fd9941be3a2479",
+        "type": "github"
+      },
+      "original": {
+        "owner": "epwalsh",
+        "repo": "obsidian.nvim",
+        "type": "github"
+      }
+    },
     "oil_nvim": {
       "flake": false,
       "locked": {
@@ -425,6 +441,7 @@
         "nvim_surround": "nvim_surround",
         "nvim_web_devicons": "nvim_web_devicons",
         "obsidian_bridge_nvim": "obsidian_bridge_nvim",
+        "obsidian_nvim": "obsidian_nvim",
         "oil_nvim": "oil_nvim",
         "plenary_nvim": "plenary_nvim",
         "telescope_file_browser_nvim": "telescope_file_browser_nvim",
