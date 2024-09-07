@@ -9,14 +9,8 @@ return {
         },
     },
     dependencies = {
-        {
-            name = "nvim-treesitter",
-            dir = "@nvim_treesitter@",
-        },
-        {
-            name = "nvim-web-devicons",
-            dir = "@nvim_web_devicons@",
-        },
+        { name = "nvim-treesitter", dir = "@nvim_treesitter@" },
+        { name = "nvim-web-devicons", dir = "@nvim_web_devicons@" },
     },
     opts = {
         on_attach = function(bufnr)

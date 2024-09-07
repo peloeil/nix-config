@@ -1,7 +1,7 @@
 vim.loader.enable()
 
 local lazypath = "@lazy_nvim@"
-vim.opt.rtp:prepend(lazypath)
+vim.opt.runtimepath:prepend(lazypath)
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
