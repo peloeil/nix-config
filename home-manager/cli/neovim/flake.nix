@@ -117,6 +117,10 @@
       url = "github:goolord/alpha-nvim";
       flake = false;
     };
+    obsidian_bridge_nvim = {
+      url = "github:oflisback/obsidian-bridge.nvim";
+      flake = false;
+    };
     plenary_nvim = {
       url = "github:nvim-lua/plenary.nvim";
       flake = false;

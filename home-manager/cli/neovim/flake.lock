@@ -352,6 +352,22 @@
         "type": "github"
       }
     },
+    "obsidian_bridge_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1718297529,
+        "narHash": "sha256-Phm4/Qjl7ebga7ViBz1K9In/favCBJPjsa/XU5U0J84=",
+        "owner": "oflisback",
+        "repo": "obsidian-bridge.nvim",
+        "rev": "ad05b2ecdf0d22a3a9387ae4684acd208695d466",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oflisback",
+        "repo": "obsidian-bridge.nvim",
+        "type": "github"
+      }
+    },
     "oil_nvim": {
       "flake": false,
       "locked": {
@@ -408,6 +424,7 @@
         "nvim_snippy": "nvim_snippy",
         "nvim_surround": "nvim_surround",
         "nvim_web_devicons": "nvim_web_devicons",
+        "obsidian_bridge_nvim": "obsidian_bridge_nvim",
         "oil_nvim": "oil_nvim",
         "plenary_nvim": "plenary_nvim",
         "telescope_file_browser_nvim": "telescope_file_browser_nvim",
