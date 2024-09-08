@@ -10,7 +10,7 @@ return {
     },
     opts = {
         options = {
-            theme = "gruvbox_dark",
+            theme = "iceberg_dark",
         },
     },
 }
