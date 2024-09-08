@@ -48,9 +48,26 @@ return {
                 "-uu",
             },
         },
+        pickers = {
+            find_files = {
+                theme = "ivy",
+            },
+            live_grep = {
+                theme = "ivy",
+            },
+            help_tags = {
+                theme = "ivy",
+            },
+        },
         extensions = {
             file_browser = {
+                theme = "ivy",
                 hijack_netrw = true,
+                mappings = {
+                    ["i"] = {
+                        ["<bs>"] = false,
+                    },
+                },
             },
             aerial = {
                 format_symbol = function(symbol_path, filetype)
