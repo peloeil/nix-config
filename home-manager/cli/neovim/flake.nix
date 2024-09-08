@@ -63,6 +63,10 @@
       url = "github:ellisonleao/gruvbox.nvim";
       flake = false;
     };
+    catppuccin = {
+      url = "github:catppuccin/nvim";
+      flake = false;
+    };
     lualine_nvim = {
       url = "github:nvim-lualine/lualine.nvim";
       flake = false;

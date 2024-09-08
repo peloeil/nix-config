@@ -22,4 +22,29 @@ return {
             vim.cmd("colorscheme gruvbox")
         end,
     },
+    {
+        cond = false,
+        name = "catppuccin",
+        dir = "@catppuccin@",
+        priority = 1000,
+        event = {
+            "VimEnter",
+        },
+        opts = {
+            flavor = "mocha",
+            transparent_background = true,
+            term_colors = true,
+            no_italic = true,
+            integrations = {
+                aerial = true,
+                nvim_surround = true,
+                lsp_trouble = true,
+                which_key = true,
+            },
+        },
+        config = function(_, opts)
+            require("catppuccin").setup(opts)
+            vim.cmd("colorscheme catppuccin")
+        end,
+    },
 }
