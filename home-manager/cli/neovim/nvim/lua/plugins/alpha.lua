@@ -1,4 +1,5 @@
 return {
+    cond = false,
     name = "alpha-nvim",
     dir = "@alpha_nvim@",
     dependencies = {
