@@ -4,7 +4,9 @@ return {
     keys = {
         {
             "<leader>fc",
-            "<cmd>Telescope frecency path_display={'shorten'} theme=ivy<cr>", -- `function() require("telescope").extensions.frecency.frecency({ theme = "ivy" }) end` does not work...
+            function()
+                require("telescope").extensions.frecency.frecency(require("telescope.themes").get_dropdown())
+            end,
             silent = true,
             desc = "frecency search",
         },

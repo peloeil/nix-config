@@ -50,34 +50,13 @@ return {
         },
         pickers = {
             find_files = {
-                theme = "ivy",
+                theme = "dropdown",
             },
             live_grep = {
-                theme = "ivy",
+                theme = "dropdown",
             },
             help_tags = {
-                theme = "ivy",
-            },
-        },
-        extensions = {
-            file_browser = {
-                theme = "ivy",
-                hijack_netrw = true,
-                mappings = {
-                    ["i"] = {
-                        ["<bs>"] = false,
-                    },
-                },
-            },
-            aerial = {
-                format_symbol = function(symbol_path, filetype)
-                    if filetype == "json" or filetype == "yaml" then
-                        return table.concat(symbol_path, ".")
-                    else
-                        return symbol_path[#symbol_path]
-                    end
-                end,
-                show_columns = "both",
+                theme = "dropdown",
             },
         },
     },

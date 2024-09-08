@@ -5,7 +5,9 @@ return {
         {
             "<leader>fa",
             function()
-                require("telescope").extensions.aerial.aerial()
+                require("telescope").extensions.aerial.aerial(
+                    require("telescope.themes").get_dropdown({ previewer = false })
+                )
             end,
             silent = true,
             desc = "pick lsp symbols",

@@ -30,6 +30,52 @@ return {
         { name = "telescope.nvim", dir = "@telescope_nvim@" },
     },
     config = function(_, _)
-        require("telescope").load_extension("file_browser")
+        local telescope = require("telescope")
+        local fb_actions = telescope.extensions.file_browser.actions
+        telescope.setup({
+            extensions = {
+                file_browser = {
+                    theme = "dropdown",
+                    display_stat = { mode = true },
+                    hijack_netrw = true,
+                    mappings = {
+                        ["i"] = {
+                            --["<A-c>"] = fb_actions.create,
+                            --["<S-CR>"] = fb_actions.create_from_prompt,
+                            --["<A-r>"] = fb_actions.rename,
+                            --["<A-m>"] = fb_actions.move,
+                            --["<A-y>"] = fb_actions.copy,
+                            --["<A-d>"] = fb_actions.remove,
+                            --["<C-g>"] = fb_actions.goto_parent_dir,
+                            --["<C-f>"] = fb_actions.toggle_browser,
+                            --["<C-t>"] = fb_actions.change_cwd,
+                            ["<C-h>"] = fb_actions.goto_home_dir,
+                            ["<C-.>"] = fb_actions.toggle_hidden,
+                            ["<C-o>"] = false,
+                            ["<C-e>"] = false,
+                            ["<C-w>"] = false,
+                            ["<C-s>"] = false,
+                            ["<bs>"] = false,
+                        },
+                        ["n"] = {
+                            --["c"] = fb_actions.create,
+                            --["r"] = fb_actions.rename,
+                            --["m"] = fb_actions.move,
+                            --["y"] = fb_actions.copy,
+                            --["d"] = fb_actions.remove,
+                            --["g"] = fb_actions.goto_parent_dir,
+                            --["f"] = fb_actions.toggle_browser,
+                            --["t"] = fb_actions.change_cwd,
+                            ["h"] = fb_actions.goto_home_dir,
+                            ["o"] = false,
+                            ["e"] = false,
+                            ["w"] = false,
+                            ["s"] = false,
+                        },
+                    },
+                },
+            },
+        })
+        telescope.load_extension("file_browser")
     end,
 }
