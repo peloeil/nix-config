@@ -12,7 +12,7 @@ return {
         { name = "nvim-treesitter", dir = "@nvim_treesitter@" },
     },
     opts = function(_, _)
-        vim.opt.conceallevel = 2
+        vim.opt.conceallevel = 1
         return {
             workspaces = {
                 { name = "personal", path = "~/Obsidian Vault" },
@@ -21,9 +21,6 @@ return {
                 folder = "daily_notes",
             },
             mappings = {},
-            ui = {
-                enable = false,
-            },
         }
     end,
 }
