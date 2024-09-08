@@ -22,6 +22,10 @@ vim.opt.fileencodings = "utf-8"
 vim.opt.scrolloff = 5
 vim.opt.sidescrolloff = 10
 
+-- transparency
+vim.opt.winblend = 20
+vim.opt.pumblend = 20
+
 -- others
 vim.opt.cursorline = true
 vim.opt.loadplugins = false

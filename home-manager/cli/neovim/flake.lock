@@ -208,6 +208,22 @@
         "type": "github"
       }
     },
+    "kanagawa_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724756442,
+        "narHash": "sha256-UuKvWCPP4biV2OP18+OAookRxfpKfjBgm+1KMaf1z30=",
+        "owner": "rebelot",
+        "repo": "kanagawa.nvim",
+        "rev": "f491b0fe68fffbece7030181073dfe51f45cda81",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rebelot",
+        "repo": "kanagawa.nvim",
+        "type": "github"
+      }
+    },
     "lazy_nvim": {
       "flake": false,
       "locked": {
@@ -479,6 +495,7 @@
         "gruvbox_nvim": "gruvbox_nvim",
         "hlchunk_nvim": "hlchunk_nvim",
         "hop_nvim": "hop_nvim",
+        "kanagawa_nvim": "kanagawa_nvim",
         "lazy_nvim": "lazy_nvim",
         "lualine_nvim": "lualine_nvim",
         "nixpkgs": "nixpkgs",

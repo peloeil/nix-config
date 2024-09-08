@@ -63,6 +63,10 @@
       url = "github:ellisonleao/gruvbox.nvim";
       flake = false;
     };
+    kanagawa_nvim = {
+      url = "github:rebelot/kanagawa.nvim";
+      flake = false;
+    };
     catppuccin = {
       url = "github:catppuccin/nvim";
       flake = false;
