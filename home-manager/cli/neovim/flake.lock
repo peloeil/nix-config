@@ -416,6 +416,22 @@
         "type": "github"
       }
     },
+    "rainbow_delimiters_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725399622,
+        "narHash": "sha256-P5AXMUYetOgpPZKO/xF1nJnpIE7tRKWEvfdOLaDBlGM=",
+        "owner": "HiPhish",
+        "repo": "rainbow-delimiters.nvim",
+        "rev": "5f73b24aeb94f5274c218955573153c69ce4d1ee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "HiPhish",
+        "repo": "rainbow-delimiters.nvim",
+        "type": "github"
+      }
+    },
     "render_markdown_nvim": {
       "flake": false,
       "locked": {
@@ -460,6 +476,7 @@
         "obsidian_nvim": "obsidian_nvim",
         "oil_nvim": "oil_nvim",
         "plenary_nvim": "plenary_nvim",
+        "rainbow_delimiters_nvim": "rainbow_delimiters_nvim",
         "render_markdown_nvim": "render_markdown_nvim",
         "telescope_file_browser_nvim": "telescope_file_browser_nvim",
         "telescope_frecency_nvim": "telescope_frecency_nvim",

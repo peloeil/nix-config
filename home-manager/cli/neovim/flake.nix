@@ -149,6 +149,10 @@
       url = "github:nvim-telescope/telescope-fzf-native.nvim";
       flake = false;
     };
+    rainbow_delimiters_nvim = {
+      url = "github:HiPhish/rainbow-delimiters.nvim";
+      flake = false;
+    };
   };
 
   outputs =
