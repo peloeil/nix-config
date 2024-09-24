@@ -32,6 +32,22 @@
         "type": "github"
       }
     },
+    "catppuccin": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724122410,
+        "narHash": "sha256-aNmnn7Ym3+OnuvSgpke6rw4AkoVfNCpbjV71JF1c9rs=",
+        "owner": "catppuccin",
+        "repo": "nvim",
+        "rev": "4fd72a9ab64b393c2c22b168508fd244877fec96",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "nvim",
+        "type": "github"
+      }
+    },
     "cmp_buffer": {
       "flake": false,
       "locked": {
@@ -210,6 +226,22 @@
       "original": {
         "owner": "smoka7",
         "repo": "hop.nvim",
+        "type": "github"
+      }
+    },
+    "kanagawa_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724756442,
+        "narHash": "sha256-UuKvWCPP4biV2OP18+OAookRxfpKfjBgm+1KMaf1z30=",
+        "owner": "rebelot",
+        "repo": "kanagawa.nvim",
+        "rev": "f491b0fe68fffbece7030181073dfe51f45cda81",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rebelot",
+        "repo": "kanagawa.nvim",
         "type": "github"
       }
     },
@@ -456,6 +488,7 @@
       "inputs": {
         "aerial_nvim": "aerial_nvim",
         "alpha_nvim": "alpha_nvim",
+        "catppuccin": "catppuccin",
         "cmp_buffer": "cmp_buffer",
         "cmp_cmdline": "cmp_cmdline",
         "cmp_nvim_lsp": "cmp_nvim_lsp",
@@ -466,6 +499,7 @@
         "gruvbox_nvim": "gruvbox_nvim",
         "hlchunk_nvim": "hlchunk_nvim",
         "hop_nvim": "hop_nvim",
+        "kanagawa_nvim": "kanagawa_nvim",
         "lazy_nvim": "lazy_nvim",
         "lualine_nvim": "lualine_nvim",
         "nixpkgs": "nixpkgs_2",
@@ -480,6 +514,7 @@
         "obsidian_nvim": "obsidian_nvim",
         "oil_nvim": "oil_nvim",
         "plenary_nvim": "plenary_nvim",
+        "rainbow_delimiters_nvim": "rainbow_delimiters_nvim",
         "render_markdown_nvim": "render_markdown_nvim",
         "telescope_file_browser_nvim": "telescope_file_browser_nvim",
         "telescope_frecency_nvim": "telescope_frecency_nvim",
@@ -491,7 +526,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-dofkZlQkWJn1Yr68/gv840eXU2Y3m53vH11FM9l3fhk=",
+        "narHash": "sha256-QJRGI4RAmN2rE5FGyfwlwCzfPbQVHiBlRwvINfCUrM0=",
         "path": "./home-manager/cli/neovim",
         "type": "path"
       },
@@ -513,6 +548,22 @@
       "original": {
         "owner": "nvim-lua",
         "repo": "plenary.nvim",
+        "type": "github"
+      }
+    },
+    "rainbow_delimiters_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725399622,
+        "narHash": "sha256-P5AXMUYetOgpPZKO/xF1nJnpIE7tRKWEvfdOLaDBlGM=",
+        "owner": "HiPhish",
+        "repo": "rainbow-delimiters.nvim",
+        "rev": "5f73b24aeb94f5274c218955573153c69ce4d1ee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "HiPhish",
+        "repo": "rainbow-delimiters.nvim",
         "type": "github"
       }
     },
