@@ -34,6 +34,15 @@ return {
     },
     opts = {
         defaults = {
+            path_display = { "shorten" },
+            preview = {
+                filesize_limit = 0.1, --MB
+            },
+            mappings = {
+                i = {
+                    ["<C-u>"] = false,
+                },
+            },
             file_ignore_patterns = {
                 "^.git/",
             },

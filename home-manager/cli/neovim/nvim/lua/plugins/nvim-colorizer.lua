@@ -7,7 +7,7 @@ return {
     },
     -- `require("colorizer").setup({})` does not work ...
     -- so `opts = {}` can't be used.
-    config = function()
+    config = function(_, _)
         require("colorizer").setup()
     end,
 }

@@ -13,6 +13,7 @@ return {
     },
     opts = function(_, _)
         vim.opt.conceallevel = 1
+        vim.opt_local.wrap = true
         return {
             workspaces = {
                 { name = "personal", path = "~/Obsidian Vault" },

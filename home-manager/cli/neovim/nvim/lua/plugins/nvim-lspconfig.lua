@@ -22,16 +22,14 @@ local valid_patterns = {
     "*.py",
     "*.rs",
     "*.typ",
-    "*.yaml",
-    "*.yml",
 }
 
 return {
     name = "nvim-lspconfig",
     dir = "@nvim_lspconfig@",
     event = {
-        "BufNewFile  *.sh,*.c,*.h,*.cpp,*.hpp,*Dockerfile,*.lua,*.nix,*.py,*.rs,*.typ,*.yaml,*.yml",
-        "BufReadPost *.sh,*.c,*.h,*.cpp,*.hpp,*Dockerfile,*.lua,*.nix,*.py,*.rs,*.typ,*.yaml,*.yml",
+        "BufNewFile  *.sh,*.c,*.h,*.cpp,*.hpp,*Dockerfile,*.lua,*.nix,*.py,*.rs,*.typ",
+        "BufReadPost *.sh,*.c,*.h,*.cpp,*.hpp,*Dockerfile,*.lua,*.nix,*.py,*.rs,*.typ",
     },
     dependencies = {
         name = "cmp-nvim-lsp",
@@ -63,7 +61,7 @@ return {
 
         -- highlight
         vim.opt.updatetime = 1000
-        local group_id = vim.api.nvim_create_augroup("__doc_highlight", { clear = true })
+        local group_id = vim.api.nvim_create_augroup("__doc_highlight", {})
         vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
             group = group_id,
             pattern = valid_patterns,
