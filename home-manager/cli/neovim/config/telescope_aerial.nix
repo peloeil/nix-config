@@ -20,4 +20,3 @@ vimUtils.buildVimPlugin {
   name = "telescope-aerial.nvim";
   src = telescope-aerial;
 }
-

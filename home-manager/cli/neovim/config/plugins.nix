@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}:
+{ inputs, pkgs, ... }:
 let
   pluginInputs = builtins.removeAttrs inputs [ "nixpkgs" ];
 in
