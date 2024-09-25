@@ -56,5 +56,11 @@ in
       overlays = [ ];
       modules = [ ./nixootas/users/peloeil ];
     };
+    "sota@raspberrypi" = mkHomeManagerConfiguration {
+      system = "aarch64-linux";
+      username = "sota";
+      overlays = [ ];
+      modules = [ ./raspberrypi/users/sota ];
+    };
   };
 }
