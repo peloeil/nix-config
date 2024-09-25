@@ -526,12 +526,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-QJRGI4RAmN2rE5FGyfwlwCzfPbQVHiBlRwvINfCUrM0=",
-        "path": "./home-manager/cli/neovim",
+        "narHash": "sha256-UtQqU5/XYFUA6ybYX98TZxoUa6bU5JCtEaaRkvBl7Fk=",
+        "path": "home-manager/cli/neovim",
         "type": "path"
       },
       "original": {
-        "path": "./home-manager/cli/neovim",
+        "path": "home-manager/cli/neovim",
         "type": "path"
       }
     },
