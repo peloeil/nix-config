@@ -1,36 +1,34 @@
-local server_list = {
-    "bashls",
-    "clangd",
-    "docker_compose_language_service",
-    "dockerls",
-    "lua_ls",
-    "nil_ls",
-    "ruff_lsp",
-    "rust_analyzer",
-    "tinymist",
-    "yamlls",
+local patterns_list = {
+    bashls = { "*.sh" },
+    clangd = { "*.c", "*.h", "*.cpp", "*.hpp" },
+    docker_compose_language_service = { "docker-compose.yaml", "docker-compose.yml", "compose.yaml", "compose.yml" },
+    dockerls = { "Dockerfile" },
+    lua_ls = { "*.lua" },
+    nil_ls = { "*.nix" },
+    ruff_lsp = { "*.py" },
+    rust_analyzer = { "*.rs" },
+    tinymist = { "*.typ" },
+    yamlls = { "*.yaml", "*.yml" },
 }
 
-local valid_patterns = {
-    "*.sh",
-    "*.c",
-    "*.h",
-    "*.cpp",
-    "*.hpp",
-    "Dockerfile",
-    "*.lua",
-    "*.nix",
-    "*.py",
-    "*.rs",
-    "*.typ",
-}
+local function get_all_patterns()
+    local all_patterns = {}
+    for _, patterns in pairs(patterns_list) do
+        for _, pattern in ipairs(patterns) do
+            table.insert(all_patterns, pattern)
+        end
+    end
+    return table.concat(all_patterns, ",")
+end
+
+local all_patterns = get_all_patterns()
 
 return {
     name = "nvim-lspconfig",
     dir = "@nvim_lspconfig@",
     event = {
-        "BufNewFile  *.sh,*.c,*.h,*.cpp,*.hpp,*Dockerfile,*.lua,*.nix,*.py,*.rs,*.typ",
-        "BufReadPost *.sh,*.c,*.h,*.cpp,*.hpp,*Dockerfile,*.lua,*.nix,*.py,*.rs,*.typ",
+        "BufNewFile " .. all_patterns,
+        "BufReadPost " .. all_patterns,
     },
     dependencies = {
         name = "cmp-nvim-lsp",
@@ -41,20 +39,20 @@ return {
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         local doc_highlight = vim.api.nvim_create_augroup("__doc_highlight", {})
 
-        for _, server in ipairs(server_list) do
+        for server, patterns in pairs(patterns_list) do
             local opt = {
                 capabilities = capabilities,
-                on_attach = function(client, bufnr)
+                on_attach = function(client, _)
                     vim.opt.updatetime = 1000
                     if client.supports_method("textDocument/documentHighlight") then
                         vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
                             group = doc_highlight,
-                            buffer = bufnr,
+                            pattern = patterns,
                             callback = vim.lsp.buf.document_highlight,
                         })
                         vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
                             group = doc_highlight,
-                            pattern = valid_patterns,
+                            pattern = patterns,
                             callback = vim.lsp.buf.clear_references,
                         })
                     end
