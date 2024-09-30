@@ -3,6 +3,7 @@ local server_list = {
     "clangd",
     "docker_compose_language_service",
     "dockerls",
+    "lua_ls",
     "nil_ls",
     "ruff_lsp",
     "rust_analyzer",
@@ -38,39 +39,41 @@ return {
     config = function(_, _)
         local lspconfig = require("lspconfig")
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
-        for _, server in ipairs(server_list) do
-            lspconfig[server].setup({
-                capabilities = capabilities,
-            })
-        end
-        lspconfig["lua_ls"].setup({
-            capabilities = capabilities,
-            settings = {
-                Lua = {
-                    diagnostics = { globals = { "vim" } },
-                },
-            },
-        })
+        local doc_highlight = vim.api.nvim_create_augroup("__doc_highlight", {})
 
-        -- keymaps
+        for _, server in ipairs(server_list) do
+            local opt = {
+                capabilities = capabilities,
+                on_attach = function(client, bufnr)
+                    vim.opt.updatetime = 1000
+                    if client.supports_method("textDocument/documentHighlight") then
+                        vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+                            group = doc_highlight,
+                            buffer = bufnr,
+                            callback = vim.lsp.buf.document_highlight,
+                        })
+                        vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+                            group = doc_highlight,
+                            pattern = valid_patterns,
+                            callback = vim.lsp.buf.clear_references,
+                        })
+                    end
+                end,
+            }
+            if server == "lua_ls" then
+                opt.settings = {
+                    Lua = {
+                        diagnostics = { globals = { "vim" } },
+                    },
+                }
+            end
+            lspconfig[server].setup(opt)
+        end
+
         local opt = { silent = true }
         vim.keymap.set("n", "K", vim.lsp.buf.hover, opt)
         vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, opt)
         vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, opt)
         vim.keymap.set("n", "<leader>ln", vim.lsp.buf.rename, opt)
-
-        -- highlight
-        vim.opt.updatetime = 1000
-        local group_id = vim.api.nvim_create_augroup("__doc_highlight", {})
-        vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-            group = group_id,
-            pattern = valid_patterns,
-            callback = vim.lsp.buf.document_highlight,
-        })
-        vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
-            group = group_id,
-            pattern = valid_patterns,
-            callback = vim.lsp.buf.clear_references,
-        })
     end,
 }
