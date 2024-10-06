@@ -7,7 +7,7 @@ with pkgs;
   dockerfile-language-server-nodejs # dockerfile
   lua-language-server # lua
   nil # nix
-  ruff-lsp # python
+  pyright # python
   rust-analyzer # rust
   tinymist # typst
   yaml-language-server # yaml
