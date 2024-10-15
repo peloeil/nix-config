@@ -13,6 +13,7 @@
       ../../../nixos/core/tailscale.nix
       ../../../nixos/core/udisks.nix
       ../../../nixos/core/xserver.nix
+      ../../../nixos/core/virt-manager.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd
@@ -65,6 +66,7 @@
       "video"
       "docker"
       "networkmanager"
+      "libvirtd"
     ]; # Enable ‘sudo’ for the user.
   };
 

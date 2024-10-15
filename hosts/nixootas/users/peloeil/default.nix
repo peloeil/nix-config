@@ -8,6 +8,7 @@
     ../../../../home-manager/gui/fcitx
     ../../../../home-manager/gui/vscode.nix
     ../../../../home-manager/gui/wezterm
+    ../../../../home-manager/gui/dconf.nix
     ./firefox.nix
     ./git.nix
   ];
