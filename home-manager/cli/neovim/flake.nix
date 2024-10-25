@@ -161,6 +161,10 @@
       url = "github:HiPhish/rainbow-delimiters.nvim";
       flake = false;
     };
+    ft_header = {
+      url = "github:Diogo-ss/42-header.nvim";
+      flake = false;
+    };
   };
 
   outputs =
@@ -184,17 +188,19 @@
           lsp = import ./config/lsp.nix { inherit pkgs; };
           fmter = import ./config/formatter.nix { inherit pkgs; };
           tools = import ./config/tools.nix { inherit pkgs; };
-          config = pkgs.callPackage ./config { inherit pkgs plugins; };
+          config-default = pkgs.callPackage ./config/default.nix { inherit pkgs plugins; };
+          config-ft-tokyo = pkgs.callPackage ./config/ft-tokyo.nix { inherit pkgs plugins; };
           nvim-with =
-            tools:
+            config: tools:
             pkgs.writeShellScriptBin "nvim" ''
-              PATH=$PATH:${pkgs.lib.makeBinPath tools}
               MY_CONFIG_PATH=${config} ${pkgs.neovim-unwrapped}/bin/nvim -u ${config}/init.lua "$@"
+              PATH=${pkgs.lib.makeBinPath tools}:$PATH
             '';
         in
         {
-          default = nvim-with (lsp ++ fmter ++ tools);
-          inherit config;
+          default = nvim-with config-default (lsp ++ fmter ++ tools);
+          ft-tokyo = nvim-with config-ft-tokyo (lsp ++ fmter ++ tools);
+          inherit config-default config-ft-tokyo;
         }
       );
     };

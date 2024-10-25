@@ -12,7 +12,7 @@ stdenv.mkDerivation (
   // {
     pname = "peloeil-nvim-config";
     version = "0.0.1";
-    src = ../nvim/default;
+    src = ../nvim/ft-tokyo;
     installPhase = ''
       mkdir -p $out
       for file in $(find . -type f); do
@@ -22,3 +22,4 @@ stdenv.mkDerivation (
     '';
   }
 )
+

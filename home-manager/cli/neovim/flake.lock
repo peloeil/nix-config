@@ -144,6 +144,22 @@
         "type": "github"
       }
     },
+    "ft_header": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725484166,
+        "narHash": "sha256-cW+YizhOV9MdwnBrzp2UZj0/CdZ705rxroBldlhc8NI=",
+        "owner": "Diogo-ss",
+        "repo": "42-header.nvim",
+        "rev": "9e816c72712ac72aa576b18a14a5427578c90ff7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Diogo-ss",
+        "repo": "42-header.nvim",
+        "type": "github"
+      }
+    },
     "gitsigns_nvim": {
       "flake": false,
       "locked": {
@@ -491,6 +507,7 @@
         "cmp_path": "cmp_path",
         "cmp_snippy": "cmp_snippy",
         "conform_nvim": "conform_nvim",
+        "ft_header": "ft_header",
         "gitsigns_nvim": "gitsigns_nvim",
         "gruvbox_nvim": "gruvbox_nvim",
         "hlchunk_nvim": "hlchunk_nvim",
