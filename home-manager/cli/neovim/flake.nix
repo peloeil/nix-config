@@ -193,8 +193,8 @@
           nvim-with =
             config: tools:
             pkgs.writeShellScriptBin "nvim" ''
-              MY_CONFIG_PATH=${config} ${pkgs.neovim-unwrapped}/bin/nvim -u ${config}/init.lua "$@"
               PATH=${pkgs.lib.makeBinPath tools}:$PATH
+              MY_CONFIG_PATH=${config} ${pkgs.neovim-unwrapped}/bin/nvim -u ${config}/init.lua "$@"
             '';
         in
         {
