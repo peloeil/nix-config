@@ -165,6 +165,20 @@
       url = "github:Diogo-ss/42-header.nvim";
       flake = false;
     };
+
+    # copilot
+    copilot_lua = {
+      url = "github:zbirenbaum/copilot.lua";
+      flake = false;
+    };
+    copilot_cmp = {
+      url = "github:zbirenbaum/copilot-cmp";
+      flake = false;
+    };
+    copilot_chat = {
+      url = "github:CopilotC-Nvim/CopilotChat.nvim";
+      flake = false;
+    };
   };
 
   outputs =

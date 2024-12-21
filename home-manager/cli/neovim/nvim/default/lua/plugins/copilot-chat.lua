@@ -5,6 +5,26 @@ return {
         { name = "copilot", dir = "@copilot_lua@" },
         { name = "plenary.nvim", dir = "@plenary_nvim@" },
     },
+    cmd = {
+        "CopilotChat",
+        "CopilotChatOpen",
+        "CopilotChatClose",
+        "CopilotChatToggle",
+        "CopilotChatStop",
+        "CopilotChatReset",
+        "CopilotChatSave",
+        "CopilotChatLoad",
+        "CopilotChatDebugInfo",
+        "CopilotChatModels",
+        "CopilotChatAgents",
+        "CopilotChatExplain",
+        "CopilotChatReview",
+        "CopilotChatFix",
+        "CopilotChatOptimize",
+        "CopilotChatDocs",
+        "CopilotChatTests",
+        "CopilotChatCommit",
+    },
     keys = {
         {
             "<leader>cq",
@@ -18,7 +38,11 @@ return {
             desc = "CopilotChat - Quick chat",
         },
     },
-    opts = {
-        show_help = true,
-    },
+    opts = function()
+        vim.opt.completeopt = "menu,preview,noinsert,popup"
+        return {
+            model = "o1-mini",
+            show_help = true,
+        }
+    end,
 }
