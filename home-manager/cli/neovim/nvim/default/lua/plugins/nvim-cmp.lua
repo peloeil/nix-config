@@ -24,6 +24,20 @@ return {
         { name = "cmp-path", dir = "@cmp_path@" },
         { name = "cmp-cmdline", dir = "@cmp_cmdline@" },
         { name = "cmp-nvim-lsp", dir = "@cmp_nvim_lsp@" },
+        {
+            name = "copilot-cmp",
+            dir = "@copilot_cmp@",
+            cmd = "Copilot",
+            dependencies = {
+                name = "copilot",
+                dir = "@copilot_lua@",
+                opts = {
+                    suggestion = { enable = false },
+                    panel = { enable = false },
+                },
+            },
+            opts = {},
+        },
     },
     opts = function(_, _)
         local cmp = require("cmp")
@@ -62,6 +76,7 @@ return {
                 { name = "snippy" },
             }, {
                 { name = "buffer" },
+                { name = "copilot" },
             }),
         }
     end,
