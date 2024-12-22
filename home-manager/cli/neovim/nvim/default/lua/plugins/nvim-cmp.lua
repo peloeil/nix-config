@@ -28,14 +28,7 @@ return {
             name = "copilot-cmp",
             dir = "@copilot_cmp@",
             cmd = "Copilot",
-            dependencies = {
-                name = "copilot",
-                dir = "@copilot_lua@",
-                opts = {
-                    suggestion = { enable = false },
-                    panel = { enable = false },
-                },
-            },
+            dependencies = { name = "copilot", dir = "@copilot_lua@" },
             opts = {},
         },
     },
