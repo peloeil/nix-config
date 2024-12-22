@@ -4,7 +4,7 @@ neovim + lazy.nvim でプラグインを管理する flake
 プラグインの設定ファイルは省略
 ```
 .
-├── config
+├── nix
 │   ├── default.nix
 │   ├── formatter.nix
 │   ├── lazy_nvim.nix

@@ -198,12 +198,12 @@
         system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
-          plugins = import ./config/plugins.nix { inherit inputs pkgs; };
-          lsp = import ./config/lsp.nix { inherit pkgs; };
-          fmter = import ./config/formatter.nix { inherit pkgs; };
-          tools = import ./config/tools.nix { inherit pkgs; };
-          config-default = pkgs.callPackage ./config/default.nix { inherit pkgs plugins; };
-          config-ft-tokyo = pkgs.callPackage ./config/ft-tokyo.nix { inherit pkgs plugins; };
+          plugins = import ./nix/plugins.nix { inherit inputs pkgs; };
+          lsp = import ./nix/lsp.nix { inherit pkgs; };
+          fmter = import ./nix/formatter.nix { inherit pkgs; };
+          tools = import ./nix/tools.nix { inherit pkgs; };
+          config-default = pkgs.callPackage ./nix/default.nix { inherit pkgs plugins; };
+          config-ft-tokyo = pkgs.callPackage ./nix/ft-tokyo.nix { inherit pkgs plugins; };
           nvim-with =
             config: tools:
             pkgs.writeShellScriptBin "nvim" ''
