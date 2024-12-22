@@ -6,6 +6,7 @@
     extraConfig = {
       init.defaultBranch = "main";
       gpg.format = "ssh";
+      core.editor = "nvim";
     };
     signing = {
       signByDefault = true;
