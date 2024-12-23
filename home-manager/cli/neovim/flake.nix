@@ -76,6 +76,24 @@
       flake = false;
     };
 
+    # fuzzy finder
+    telescope_nvim = {
+      url = "github:nvim-telescope/telescope.nvim";
+      flake = false;
+    };
+    telescope_frecency_nvim = {
+      url = "github:nvim-telescope/telescope-frecency.nvim";
+      flake = false;
+    };
+    telescope_file_browser_nvim = {
+      url = "github:nvim-telescope/telescope-file-browser.nvim";
+      flake = false;
+    };
+    telescope_fzf_native_nvim = {
+      url = "github:nvim-telescope/telescope-fzf-native.nvim";
+      flake = false;
+    };
+
     # misc
     hop_nvim = {
       url = "github:smoka7/hop.nvim";
@@ -139,22 +157,6 @@
     };
     plenary_nvim = {
       url = "github:nvim-lua/plenary.nvim";
-      flake = false;
-    };
-    telescope_nvim = {
-      url = "github:nvim-telescope/telescope.nvim";
-      flake = false;
-    };
-    telescope_frecency_nvim = {
-      url = "github:nvim-telescope/telescope-frecency.nvim";
-      flake = false;
-    };
-    telescope_file_browser_nvim = {
-      url = "github:nvim-telescope/telescope-file-browser.nvim";
-      flake = false;
-    };
-    telescope_fzf_native_nvim = {
-      url = "github:nvim-telescope/telescope-fzf-native.nvim";
       flake = false;
     };
     rainbow_delimiters_nvim = {
