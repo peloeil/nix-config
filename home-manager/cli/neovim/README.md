@@ -4,15 +4,20 @@ neovim + lazy.nvim でプラグインを管理する flake
 プラグインの設定ファイルは省略
 ```
 .
+├── default.nix
+├── flake.lock
+├── flake.nix
 ├── nix
+│   ├── copilot_chat.nix
 │   ├── default.nix
 │   ├── formatter.nix
 │   ├── lazy_nvim.nix
 │   ├── lsp.nix
-│   └── plugins.nix
-├── default.nix
-├── flake.lock
-├── flake.nix
+│   ├── parser.nix
+│   ├── plugins.nix
+│   ├── telescope_aerial.nix
+│   ├── telescope_fzf_native.nix
+│   └── tools.nix
 ├── nvim
 │   ├── init.lua
 │   └── lua
@@ -21,7 +26,7 @@ neovim + lazy.nvim でプラグインを管理する flake
 │       └── plugins
 └── README.md
 ```
-## `config`
+## `nix/`
 この flake の設定を行うファイル
 - `default.nix`
     設定ファイル(`nvim` 以下)を nix 内で使えるように置換などをする設定
