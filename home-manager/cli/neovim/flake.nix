@@ -175,6 +175,10 @@
       url = "github:monaqa/dial.nvim";
       flake = false;
     };
+    treesj = {
+      url = "github:Wansmer/treesj";
+      flake = false;
+    };
 
     # copilot
     copilot_lua = {

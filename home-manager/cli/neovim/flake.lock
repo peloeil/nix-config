@@ -619,6 +619,7 @@
         "telescope_fzf_native_nvim": "telescope_fzf_native_nvim",
         "telescope_nvim": "telescope_nvim",
         "toggleterm_nvim": "toggleterm_nvim",
+        "treesj": "treesj",
         "trouble_nvim": "trouble_nvim",
         "which_key_nvim": "which_key_nvim"
       }
@@ -700,6 +701,22 @@
       "original": {
         "owner": "akinsho",
         "repo": "toggleterm.nvim",
+        "type": "github"
+      }
+    },
+    "treesj": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734004168,
+        "narHash": "sha256-Uib4ZH6/9nwJQIRggaytYLWHLoJOn3EDRxJWMJmtifk=",
+        "owner": "Wansmer",
+        "repo": "treesj",
+        "rev": "94f6df623f2d15630b1b617abff39962024cb501",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Wansmer",
+        "repo": "treesj",
         "type": "github"
       }
     },
