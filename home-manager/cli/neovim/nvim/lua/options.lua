@@ -12,6 +12,11 @@ vim.opt.expandtab = true
 vim.opt.shiftround = true
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
+if vim.g.ft_tokyo == true then
+    vim.opt.tabstop = 4
+    vim.opt.list = true
+    vim.opt.listchars = { tab = "<->", trail = "-" }
+end
 
 -- enconding
 vim.opt.encoding = "utf-8"

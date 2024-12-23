@@ -6,7 +6,7 @@ return {
     },
     dependencies = {
         { name = "nvim-web-devicons", dir = "@nvim_web_devicons@" },
-        { name = "gitsigsn.nvim", dir = "@gitsigns_nvim@" },
+        { name = "gitsigns.nvim", dir = "@gitsigns_nvim@" },
     },
     opts = function(_, _)
         vim.g.laststatus = 3
