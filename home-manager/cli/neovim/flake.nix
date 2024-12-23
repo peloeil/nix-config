@@ -165,6 +165,10 @@
       url = "github:Diogo-ss/42-header.nvim";
       flake = false;
     };
+    incline_nvim = {
+      url = "github:b0o/incline.nvim";
+      flake = false;
+    };
 
     # copilot
     copilot_lua = {

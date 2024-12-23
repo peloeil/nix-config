@@ -11,6 +11,7 @@ return {
     opts = {
         options = {
             theme = "iceberg_dark",
+            globalstatus = true,
         },
     },
 }

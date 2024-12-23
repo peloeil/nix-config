@@ -66,6 +66,11 @@ return {
                     PmenuSel = { fg = "none", bg = theme.ui.bg_p2 },
                     PmenuSbar = { bg = theme.ui.bg_m1 },
                     PmenuThumb = { bg = theme.ui.bg_p2 },
+
+                    WinSeparator = {
+                        fg = colors.palette.fujiGray,
+                        bold = true,
+                    },
                 }
             end,
         },

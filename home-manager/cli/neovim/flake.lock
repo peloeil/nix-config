@@ -272,6 +272,22 @@
         "type": "github"
       }
     },
+    "incline_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1715926410,
+        "narHash": "sha256-5DoIvIdAZV7ZgmQO2XmbM3G+nNn4tAumsShoN3rDGrs=",
+        "owner": "b0o",
+        "repo": "incline.nvim",
+        "rev": "16fc9c073e3ea4175b66ad94375df6d73fc114c0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "b0o",
+        "repo": "incline.nvim",
+        "type": "github"
+      }
+    },
     "kanagawa_nvim": {
       "flake": false,
       "locked": {
@@ -563,6 +579,7 @@
         "gruvbox_nvim": "gruvbox_nvim",
         "hlchunk_nvim": "hlchunk_nvim",
         "hop_nvim": "hop_nvim",
+        "incline_nvim": "incline_nvim",
         "kanagawa_nvim": "kanagawa_nvim",
         "lazy_nvim": "lazy_nvim",
         "lualine_nvim": "lualine_nvim",
