@@ -1,5 +1,5 @@
 return {
-    cond = vim.g.ft_tokyo,
+    cond = @useFtTokyo@,
     name = "ft_header",
     dir = "@ft_header@",
     cmd = {

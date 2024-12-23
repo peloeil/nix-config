@@ -2,13 +2,14 @@
   pkgs,
   stdenv,
   plugins,
-  useFtTokyo ? false,
+  useFtTokyo ? "false",
   ...
 }:
 stdenv.mkDerivation (
   plugins
   // {
     treesitter_parser = import ./parser.nix { inherit pkgs; };
+    inherit useFtTokyo;
   }
   // {
     pname = "peloeil-nvim-config";
