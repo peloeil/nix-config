@@ -169,6 +169,10 @@
       url = "github:b0o/incline.nvim";
       flake = false;
     };
+    dial_nvim = {
+      url = "github:monaqa/dial.nvim";
+      flake = false;
+    };
 
     # copilot
     copilot_lua = {
