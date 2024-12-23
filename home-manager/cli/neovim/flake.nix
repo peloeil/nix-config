@@ -179,6 +179,10 @@
       url = "github:Wansmer/treesj";
       flake = false;
     };
+    comment_nvim = {
+      url = "github:numToStr/Comment.nvim";
+      flake = false;
+    };
 
     # copilot
     copilot_lua = {
