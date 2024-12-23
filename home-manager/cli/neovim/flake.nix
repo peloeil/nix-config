@@ -207,7 +207,10 @@
           fmter = import ./nix/formatter.nix { inherit pkgs; };
           tools = import ./nix/tools.nix { inherit pkgs; };
           config-default = pkgs.callPackage ./nix/default.nix { inherit pkgs plugins; };
-          config-ft-tokyo = pkgs.callPackage ./nix/ft-tokyo.nix { inherit pkgs plugins; };
+          config-ft-tokyo = pkgs.callPackage ./nix/default.nix {
+            useFtTokyo = "true";
+            inherit pkgs plugins;
+          };
           nvim-with =
             config: tools:
             pkgs.writeShellScriptBin "nvim" ''
