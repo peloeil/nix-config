@@ -22,6 +22,7 @@
       "zoom"
       "vscode"
       "vscode-extension-ms-vscode-cpptools"
+      "vscode-extension-ms-vscode-remote-remote-ssh"
     ];
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
