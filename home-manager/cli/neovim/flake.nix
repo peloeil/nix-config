@@ -39,6 +39,10 @@
       url = "github:hrsh7th/cmp-nvim-lsp";
       flake = false;
     };
+    lazydev_nvim = {
+      url = "github:folke/lazydev.nvim";
+      flake = false;
+    };
 
     # LSP
     nvim_lspconfig = {

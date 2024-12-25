@@ -70,6 +70,7 @@ return {
             }, {
                 { name = "buffer" },
                 { name = "copilot" },
+                { name = "lazydev", group_index = 0 },
             }),
             sorting = {
                 priority_weight = 2,
