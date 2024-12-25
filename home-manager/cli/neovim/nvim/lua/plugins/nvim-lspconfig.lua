@@ -58,13 +58,6 @@ return {
                     end
                 end,
             }
-            if server == "lua_ls" then
-                opt.settings = {
-                    Lua = {
-                        diagnostics = { globals = { "vim" } },
-                    },
-                }
-            end
             lspconfig[server].setup(opt)
         end
 
