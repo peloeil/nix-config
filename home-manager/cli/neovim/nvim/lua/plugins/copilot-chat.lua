@@ -42,6 +42,12 @@ return {
         vim.opt.completeopt = "menu,preview,noinsert,popup"
         return {
             model = "claude-3.5-sonnet",
+            selection = function(source)
+                return require("CopilotChat.select").buffer(source)
+            end,
+            window = {
+                layout = "float",
+            },
             show_help = true,
         }
     end,
