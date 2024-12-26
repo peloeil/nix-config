@@ -8,7 +8,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- indent
-vim.opt.expandtab = true
+vim.opt.expandtab = not @useFtTokyo@
 vim.opt.shiftround = true
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
