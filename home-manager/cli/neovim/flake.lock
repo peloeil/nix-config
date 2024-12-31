@@ -224,6 +224,22 @@
         "type": "github"
       }
     },
+    "fidget_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734334336,
+        "narHash": "sha256-o0za2NxFtzHZa7PRIm9U/P1/fwJrxS1G79ukdGLhJ4Q=",
+        "owner": "j-hui",
+        "repo": "fidget.nvim",
+        "rev": "9238947645ce17d96f30842e61ba81147185b657",
+        "type": "github"
+      },
+      "original": {
+        "owner": "j-hui",
+        "repo": "fidget.nvim",
+        "type": "github"
+      }
+    },
     "ft_header": {
       "flake": false,
       "locked": {
@@ -624,6 +640,7 @@
         "copilot_cmp": "copilot_cmp",
         "copilot_lua": "copilot_lua",
         "dial_nvim": "dial_nvim",
+        "fidget_nvim": "fidget_nvim",
         "ft_header": "ft_header",
         "gitsigns_nvim": "gitsigns_nvim",
         "gruvbox_nvim": "gruvbox_nvim",

@@ -187,6 +187,10 @@
       url = "github:numToStr/Comment.nvim";
       flake = false;
     };
+    fidget_nvim = {
+      url = "github:j-hui/fidget.nvim";
+      flake = false;
+    };
 
     # copilot
     copilot_lua = {
