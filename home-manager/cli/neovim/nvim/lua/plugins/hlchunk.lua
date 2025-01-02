@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "hlchunk.nvim",
     dir = "@hlchunk_nvim@",
     event = {

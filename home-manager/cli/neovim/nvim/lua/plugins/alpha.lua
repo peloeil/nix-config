@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "alpha-nvim",
     dir = "@alpha_nvim@",
     event = function(_, _)

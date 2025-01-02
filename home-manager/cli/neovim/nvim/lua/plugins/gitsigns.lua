@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "gitsigns.nvim",
     dir = "@gitsigns_nvim@",
     event = {

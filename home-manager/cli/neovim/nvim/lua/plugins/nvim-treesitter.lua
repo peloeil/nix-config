@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "nvim-treesitter",
     dir = "@nvim_treesitter@",
     event = {

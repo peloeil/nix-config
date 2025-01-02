@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "nvim-cmp",
     dir = "@nvim_cmp@",
     event = {

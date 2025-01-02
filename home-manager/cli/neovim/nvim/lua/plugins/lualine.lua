@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "lualine.nvim",
     dir = "@lualine_nvim@",
     event = {

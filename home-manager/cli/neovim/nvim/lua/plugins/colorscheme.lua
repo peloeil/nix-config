@@ -24,7 +24,7 @@ return {
         end,
     },
     {
-        cond = true,
+        cond = not vim.g.vscode,
         name = "kanagawa.nvim",
         dir = "@kanagawa_nvim@",
         priority = 1000,

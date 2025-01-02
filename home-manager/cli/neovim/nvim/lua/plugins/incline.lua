@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "incline_nvim",
     dir = "@incline_nvim@",
     event = {

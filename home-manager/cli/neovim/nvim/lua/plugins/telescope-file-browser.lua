@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "telescope-file-browser.nvim",
     dir = "@telescope_file_browser_nvim@",
     keys = {

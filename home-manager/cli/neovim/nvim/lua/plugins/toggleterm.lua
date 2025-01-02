@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "toggleterm.nvim",
     dir = "@toggleterm_nvim@",
     version = "*",

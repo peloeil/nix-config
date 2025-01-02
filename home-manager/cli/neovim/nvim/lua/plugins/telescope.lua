@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "telescope.nvim",
     dir = "@telescope_nvim@",
     branch = "0.1.x",

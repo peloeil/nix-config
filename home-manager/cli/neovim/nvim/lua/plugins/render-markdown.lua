@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "render-markdown.nvim",
     dir = "@render_markdown_nvim@",
     event = {

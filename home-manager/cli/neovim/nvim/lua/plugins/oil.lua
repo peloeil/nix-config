@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "oil.nvim",
     dir = "@oil_nvim@",
     keys = {

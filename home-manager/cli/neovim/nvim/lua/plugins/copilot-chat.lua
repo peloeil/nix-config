@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "copilot_chat",
     dir = "@copilot_chat@",
     dependencies = {

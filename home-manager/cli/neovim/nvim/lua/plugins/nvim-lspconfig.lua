@@ -24,6 +24,7 @@ end
 local all_patterns = get_all_patterns()
 
 return {
+    cond = not vim.g.vscode,
     name = "nvim-lspconfig",
     dir = "@nvim_lspconfig@",
     event = {

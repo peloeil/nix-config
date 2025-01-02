@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "obsidian.nvim",
     dir = "@obsidian_nvim@",
     event = {

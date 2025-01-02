@@ -1,4 +1,5 @@
 return {
+    cond = not vim.g.vscode,
     name = "telescope-aerial.nvim",
     dir = "@telescope_aerial_nvim@",
     keys = {
