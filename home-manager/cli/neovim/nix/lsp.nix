@@ -10,5 +10,6 @@ with pkgs;
   pyright # python
   rust-analyzer # rust
   tinymist # typst
+  typescript-language-server # typescript
   yaml-language-server # yaml
 ]

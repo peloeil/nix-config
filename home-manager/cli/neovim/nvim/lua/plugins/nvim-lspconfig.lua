@@ -8,6 +8,7 @@ local patterns_list = {
     pyright = { "*.py" },
     rust_analyzer = { "*.rs" },
     tinymist = { "*.typ" },
+    ts_ls = { "*.js", "*.ts", "*.tsx" },
     yamlls = { "*.yaml", "*.yml" },
 }
 
