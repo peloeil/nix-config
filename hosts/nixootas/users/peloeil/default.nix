@@ -9,6 +9,7 @@
     ../../../../home-manager/gui/vscode.nix
     ../../../../home-manager/gui/alacritty.nix
     ../../../../home-manager/gui/dconf.nix
+    ../../../../home-manager/gui/pwvucontrol.nix
     ./firefox.nix
     ./git.nix
   ];
