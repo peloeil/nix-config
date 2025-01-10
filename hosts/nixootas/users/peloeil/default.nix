@@ -23,6 +23,8 @@
       "vscode"
       "vscode-extension-ms-vscode-cpptools"
       "vscode-extension-ms-vscode-remote-remote-ssh"
+      "vscode-extension-github-copilot"
+      "vscode-extension-github-copilot-chat"
     ];
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
