@@ -7,7 +7,7 @@
     ../../../../home-manager/cli/starship.nix
     ../../../../home-manager/gui/fcitx
     ../../../../home-manager/gui/vscode.nix
-    ../../../../home-manager/gui/wezterm
+    ../../../../home-manager/gui/alacritty.nix
     ../../../../home-manager/gui/dconf.nix
     ./firefox.nix
     ./git.nix
@@ -27,7 +27,7 @@
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   home.packages = with pkgs; [
-    neofetch
+    fastfetch
     git
     which
     btop
