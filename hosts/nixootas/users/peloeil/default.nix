@@ -10,6 +10,7 @@
     ../../../../home-manager/gui/alacritty.nix
     ../../../../home-manager/gui/dconf.nix
     ../../../../home-manager/gui/pwvucontrol.nix
+    ../../../../home-manager/gui/inkscape.nix
     ./firefox.nix
     ./git.nix
   ];
