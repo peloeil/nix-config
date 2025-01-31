@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:nixos/nixos-hardware";
-    peloeil_nvim.url = "path:home-manager/cli/neovim";
+    peloeil_nvim.url = "github:peloeil/nix-config?dir=home-manager/cli/neovim";
   };
 
   outputs =
