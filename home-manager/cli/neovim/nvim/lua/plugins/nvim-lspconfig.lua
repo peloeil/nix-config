@@ -33,18 +33,27 @@ return {
         "BufReadPost " .. all_patterns,
     },
     dependencies = {
-        name = "cmp-nvim-lsp",
-        dir = "@cmp_nvim_lsp@",
+        { name = "cmp-nvim-lsp", dir = "@cmp_nvim_lsp@" },
+        {
+            name = "nvim-navic",
+            dir = "@nvim_navic@",
+            opts = function(_, _)
+                vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+                return {}
+            end,
+        },
     },
     config = function(_, _)
         local lspconfig = require("lspconfig")
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
+        local navic = require("nvim-navic")
         local doc_highlight = vim.api.nvim_create_augroup("__doc_highlight", {})
 
         for server, patterns in pairs(patterns_list) do
             local opt = {
                 capabilities = capabilities,
-                on_attach = function(client, _)
+                on_attach = function(client, bufnr)
+                    navic.attach(client, bufnr)
                     vim.opt.updatetime = 1000
                     if client.supports_method("textDocument/documentHighlight") then
                         vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {

@@ -49,6 +49,10 @@
       url = "github:neovim/nvim-lspconfig";
       flake = false;
     };
+    nvim_navic = {
+      url = "github:SmiteshP/nvim-navic";
+      flake = false;
+    };
 
     # formatter
     conform_nvim = {

@@ -480,6 +480,22 @@
         "type": "github"
       }
     },
+    "nvim_navic": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1701345631,
+        "narHash": "sha256-0p5n/V8Jlj9XyxV/fuMwsbQ7oV5m9H2GqZZEA/njxCQ=",
+        "owner": "SmiteshP",
+        "repo": "nvim-navic",
+        "rev": "8649f694d3e76ee10c19255dece6411c29206a54",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SmiteshP",
+        "repo": "nvim-navic",
+        "type": "github"
+      }
+    },
     "nvim_snippy": {
       "flake": false,
       "locked": {
@@ -656,6 +672,7 @@
         "nvim_cmp": "nvim_cmp",
         "nvim_colorizer": "nvim_colorizer",
         "nvim_lspconfig": "nvim_lspconfig",
+        "nvim_navic": "nvim_navic",
         "nvim_snippy": "nvim_snippy",
         "nvim_surround": "nvim_surround",
         "nvim_web_devicons": "nvim_web_devicons",
