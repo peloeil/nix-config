@@ -2,6 +2,12 @@
   programs.firefox = {
     enable = true;
     policies = {
+      Preferences = {
+        "accessibility.typeaheadfind.manual" = {
+          Value = false;
+          Status = "locked";
+        };
+      };
       ExtensionSettings =
         with builtins;
         let
