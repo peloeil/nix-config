@@ -14,6 +14,7 @@
       ../../../nixos/core/udisks.nix
       ../../../nixos/core/xserver.nix
       ../../../nixos/core/virt-manager.nix
+      ../../../nixos/core/openssh.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd
