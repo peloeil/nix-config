@@ -195,6 +195,10 @@
       url = "github:j-hui/fidget.nvim";
       flake = false;
     };
+    leap_nvim = {
+      url = "github:ggandor/leap.nvim";
+      flake = false;
+    };
 
     # copilot
     copilot_lua = {
