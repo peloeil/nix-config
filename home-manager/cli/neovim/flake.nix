@@ -31,10 +31,10 @@
       url = "github:hrsh7th/cmp-path";
       flake = false;
     };
-    cmp_cmdline = {
-      url = "github:hrsh7th/cmp-cmdline";
-      flake = false;
-    };
+    # cmp_cmdline = {
+    #   url = "github:hrsh7th/cmp-cmdline";
+    #   flake = false;
+    # };
     cmp_nvim_lsp = {
       url = "github:hrsh7th/cmp-nvim-lsp";
       flake = false;
