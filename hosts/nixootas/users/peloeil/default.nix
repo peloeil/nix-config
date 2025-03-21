@@ -4,7 +4,7 @@
     ../../../../home-manager/cli/fish.nix
     ../../../../home-manager/cli/git.nix
     ../../../../home-manager/cli/tmux.nix
-    ../../../../home-manager/cli/neovim
+    # ../../../../home-manager/cli/neovim
     ../../../../home-manager/cli/starship.nix
     ../../../../home-manager/gui/fcitx
     ../../../../home-manager/gui/vscode.nix
