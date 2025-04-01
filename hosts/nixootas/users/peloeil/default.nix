@@ -12,6 +12,7 @@
     ../../../../home-manager/gui/dconf.nix
     ../../../../home-manager/gui/pwvucontrol.nix
     ../../../../home-manager/gui/inkscape.nix
+    ../../../../home-manager/gui/flameshot.nix
     ./firefox.nix
     ./git.nix
   ];
